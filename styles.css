@@ -12,7 +12,7 @@ body {
     font-family: 'Inter', 'Roboto', sans-serif;
     color: var(--text-dark);
     line-height: 1.6;
-    background: url('Logo/VenRAG_logo_background.jpg') no-repeat center center fixed;
+    background: url('logo/VenRAG_logo_background.jpg') no-repeat center center fixed;
     background-size: cover;
     letter-spacing: -0.02em;
 }
