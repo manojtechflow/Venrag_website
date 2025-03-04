@@ -1,11 +1,11 @@
 /* Global Redesign for Professional AI Company Aesthetic */
 :root {
-    --primary-color: #0056b3;       /* Deep blue for tech sophistication */
-    --secondary-color: #00a86b;     /* Emerald green for innovation */
-    --accent-color: #ff6b6b;        /* Soft coral for highlights */
+    --primary-color: #d30000;       /* Dark red for company theme */
+    --secondary-color: #ff5252;     /* Lighter red for accents */
+    --accent-color: #ff9e80;        /* Soft coral for highlights */
     --text-dark: #1a1a2e;           /* Deep navy for text */
     --text-light: #4b4b6a;          /* Soft slate for secondary text */
-    --background-light: #f4f6f9;    /* Soft, professional background */
+    --background-light: #f9f3f3;    /* Soft, professional background with red tint */
 }
 
 /* Reset & Base Styles */
@@ -23,6 +23,13 @@ body {
     letter-spacing: -0.02em;
     min-height: 100vh;
     position: relative;
+    background-image: url('logo/VenRAG_logo_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
 /* Main Content Container */
@@ -48,14 +55,9 @@ h2 {
     position: relative;
 }
 
+/* Remove underlines from headers */
 h2::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    display: none;
 }
 
 p {
@@ -133,7 +135,7 @@ header {
 .nav-link:hover, 
 .nav-link.active {
     color: var(--primary-color);
-    background-color: rgba(0, 86, 179, 0.1);
+    background-color: rgba(211, 0, 0, 0.1);
 }
 
 /* Button Styling */
@@ -146,12 +148,12 @@ button {
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,86,179,0.2);
+    box-shadow: 0 4px 15px rgba(211, 0, 0, 0.2);
 }
 
 button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0,86,179,0.3);
+    box-shadow: 0 8px 25px rgba(211, 0, 0, 0.3);
 }
 
 /* Page Transition */
@@ -321,7 +323,7 @@ button:hover {
 
 .differentiator i {
     font-size: 2.5rem;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin-bottom: 1.5rem;
 }
 
@@ -477,7 +479,7 @@ button:hover {
     padding: 1.5rem;
     border-radius: 8px;
     margin-top: 1.5rem;
-    border-left: 4px solid var(--secondary-color);
+    border-left: 4px solid var(--primary-color);
 }
 
 .innovation-example h4 {
@@ -485,7 +487,7 @@ button:hover {
     margin-bottom: 0.5rem;
 }
 
-/* INDUSTRIES PAGE STYLES */
+/* INDUSTRIES PAGE STYLES - Completely restructured */
 .industries-header {
     text-align: center;
     margin-bottom: 3rem;
@@ -498,67 +500,104 @@ button:hover {
     margin: 0 auto;
 }
 
-.industries-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+.industry-showcase {
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
+    margin-bottom: 3rem;
 }
 
-.industry-card {
+.industry-block {
+    display: flex;
     background: white;
     border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
 }
 
-.industry-card:hover {
+.industry-block:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(211, 0, 0, 0.2);
+}
+
+.industry-block:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--primary-color);
 }
 
 .industry-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    border-radius: 50%;
+    width: 120px;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    flex-shrink: 0;
 }
 
 .industry-icon i {
-    font-size: 2rem;
+    font-size: 3rem;
     color: white;
 }
 
-.industry-card h3 {
+.industry-content {
+    padding: 2rem;
+    flex: 1;
+}
+
+.industry-content h3 {
     color: var(--primary-color);
     margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.industry-content p {
+    margin-bottom: 1.5rem;
 }
 
 .industry-benefits {
     list-style-type: none;
     padding: 0;
     margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
 }
 
 .industry-benefits li {
-    padding: 0.5rem 0;
+    padding: 0.5rem;
     padding-left: 1.5rem;
     position: relative;
     color: var(--text-light);
+    background-color: rgba(211, 0, 0, 0.05);
+    border-radius: 4px;
 }
 
 .industry-benefits li:before {
     content: "✓";
     position: absolute;
-    left: 0;
-    color: var(--secondary-color);
+    left: 0.5rem;
+    color: var(--primary-color);
     font-weight: bold;
 }
 
-/* CONTACT PAGE STYLES */
+.industries-cta {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-top: 2rem;
+}
+
+/* CONTACT PAGE STYLES - Improved structure */
 .contact-header {
     text-align: center;
     margin-bottom: 3rem;
@@ -568,13 +607,7 @@ button:hover {
     font-size: 1.25rem;
     color: var(--text-light);
     max-width: 800px;
-    margin: 0 auto;
-}
-
-.contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    margin: 0 auto 2rem;
 }
 
 .contact-form-container {
@@ -582,10 +615,19 @@ button:hover {
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .form-group {
     margin-bottom: 1.5rem;
+    flex: 1;
 }
 
 label {
@@ -604,29 +646,52 @@ input, textarea {
     font-family: inherit;
 }
 
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+textarea {
+    min-height: 150px;
+    resize: vertical;
 }
 
-.contact-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-}
-
-.contact-card:hover {
-    transform: translateY(-5px);
-}
-
-.contact-card i {
-    font-size: 2.5rem;
-    color: var(--primary-color);
+.required-fields-note {
+    font-size: 0.85rem;
+    color: var(--text-light);
     margin-bottom: 1.5rem;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checkbox-group input {
+    width: auto;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+}
+
+.request-demo-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Update all color references */
+.step-icon, .innovation-icon, .cta-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.differentiator i, .feature i, .contact-card i {
+    color: var(--primary-color);
+}
+
+.innovation-example {
+    border-left: 4px solid var(--primary-color);
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
 }
 
 /* FOOTER STYLES */
