@@ -3,54 +3,60 @@
 // Initialize scroll behavior
 window.onload = function() {
   window.scrollTo(0, 0);
-  };
-  
-  // Page Loading Functionality
-  const contentContainer = document.getElementById('content-container');
-  
-  async function loadPage(page) {
+};
+
+// Use the correct content container element (make sure your HTML uses id="mainContent")
+const contentContainer = document.getElementById('mainContent');
+
+// Page Loading Functionality
+async function loadPage(page) {
   try {
-  const response = await fetch(`#${page}.html`);
-  const html = await response.text();
-  contentContainer.innerHTML = html;
-  window.scrollTo(0, 0);
-  updateActiveNav(page);
+    // Fetch the page file (e.g., "home.html", "about.html", etc.)
+    const response = await fetch(`${page}.html`);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const html = await response.text();
+    contentContainer.innerHTML = html;
+    window.scrollTo(0, 0);
+    updateActiveNav(page);
   } catch (error) {
-  console.error('Error loading page:', error);
-  contentContainer.innerHTML = '<p>Error loading page content</p>';
+    console.error('Error loading page:', error);
+    contentContainer.innerHTML = '<p>Error loading page content</p>';
   }
-  }
-  
-  function updateActiveNav(page) {
+}
+
+function updateActiveNav(page) {
   document.querySelectorAll('.nav-link').forEach(link => {
-  link.classList.remove('active');
-  if (link.dataset.target === page) {
-  link.classList.add('active');
-  }
+    link.classList.remove('active');
+    if (link.dataset.target === page) {
+      link.classList.add('active');
+    }
   });
+}
+
+// Event Delegation for Navigation
+document.addEventListener('click', (e) => {
+  const navLink = e.target.closest('.nav-link');
+  if (navLink) {
+    e.preventDefault();
+    const page = navLink.dataset.target;
+    loadPage(page);
+    history.pushState({ page }, '', `#${page}`);
   }
-  
-  // Event Delegation for Navigation
-  document.addEventListener('click', (e) => {
-  if (e.target.closest('.nav-link')) {
-  e.preventDefault();
-  const page = e.target.closest('.nav-link').dataset.target;
-  loadPage(page);
-  history.pushState({ page }, '', `#${page}`);
-  }
-  });
-  
-  // Handle Browser History
-  window.addEventListener('popstate', (e) => {
+});
+
+// Handle Browser History
+window.addEventListener('popstate', (e) => {
   if (e.state?.page) {
-  loadPage(e.state.page);
+    loadPage(e.state.page);
   } else {
-  loadPage('home');
+    loadPage('home');
   }
-  });
-  
-  // Initial Page Load
-  const initialPage = window.location.hash.slice(1) || 'home';
-  loadPage(initialPage);
-  
-  // Add other page operations here as needed
+});
+
+// Initial Page Load: Default to "home" if no hash is present
+const initialPage = window.location.hash.slice(1) || 'home';
+loadPage(initialPage);
+
+// Add other page operations here as needed

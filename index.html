@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VenRAG - Enterprise AI Intelligence Platform</title>
+  <meta name="description" content="Advanced AI solutions for intelligent data interaction and enterprise insights">
+  
+  <!-- Preload Critical Resources -->
+  <!-- Updated folder name from 'Logo' to 'logo' -->
+  <link rel="preload" href="logo/VenRAG_logo.PNG" as="image">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Icons (Consider updating or removing the integrity attribute if needed) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnH5z+2m5e6B7jJ5z3jn7a6Yc+0y+0X2lIbRF5OvX+NN4iG2V3V2w4mC4L9YYBs1Ug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo/VenRAG_logo.PNG">
+</head>
+<body>
+  <!-- Page transition element -->
+  <div class="page-transition">
+    <img src="logo/VenRAG_logo.PNG" alt="VenRAG Logo" class="transition-logo">
+  </div>
+  
+  <div class="page-content">
+    <header>
+      <div class="container header-container">
+        <div class="logo-container">
+          <div class="logo">
+            <!-- Use data-target to indicate the section to show -->
+            <a href="#" data-target="home">
+              <img src="logo/VenRAG_logo.PNG" alt="VenRAG Logo" class="logo-img">
+            </a>
+          </div>
+          <h1 class="header-title">VenRAG</h1>
+        </div>
+        <nav>
+          <ul class="nav-list" unselectable="on">
+            <li>
+              <a href="#home" data-target="home" class="nav-link">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="#about" data-target="about" class="nav-link">
+                <i class="fas fa-info-circle"></i>
+                <span>About</span>
+              </a>
+            </li>
+            <li>
+              <a href="#venrag-chat" data-target="venrag-chat" class="nav-link">
+                <i class="fas fa-comments"></i>
+                <span>VenRAG Chat</span>
+              </a>
+            </li>
+            <li>
+              <a href="#future" data-target="future" class="nav-link">
+                <i class="fas fa-rocket"></i>
+                <span>Innovations</span>
+              </a>
+            </li>
+            <li>
+              <a href="#industries" data-target="industries" class="nav-link">
+                <i class="fas fa-industry"></i>
+                <span>Industries</span>
+              </a>
+            </li>
+            <li>
+              <a href="#contact" data-target="contact" class="nav-link">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="mainContent">
+      <!-- Home Section (default active) -->
+      <section id="home" class="page active hero">
+        <div class="container">
+          <div class="hero-content">
+            <h2>Unlock Your Data</h2>
+            <p class="hero-subtitle">Revolutionize your enterprise data interaction with AI-driven intelligent query resolution</p>
+            <div class="cta-buttons">
+              <button onclick="navigateTo('contact', event)">Request a Demo</button>
+              <button onclick="navigateTo('about', event)">Learn More</button>
+            </div>
+          </div>
+          <div class="features">
+            <div class="feature">
+              <i class="fas fa-robot"></i>
+              <h3>AI-Powered Query Resolution</h3>
+              <p>Extract, analyze, and interact with data effortlessly</p>
+            </div>
+            <div class="feature">
+              <i class="fas fa-building"></i>
+              <h3>Seamless Enterprise Integration</h3>
+              <p>Secure, scalable, and compliant with industry standards</p>
+            </div>
+            <div class="feature">
+              <i class="fas fa-infinity"></i>
+              <h3>Unlimited Data Processing</h3>
+              <p>No token limits for enterprise users</p>
+            </div>
+            <div class="feature">
+              <i class="fas fa-file-alt"></i>
+              <h3>Multi-Format Document Support</h3>
+              <p>Works with all document types for maximum flexibility</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="page">
+        <div class="container">
+          <div class="about-header">
+            <h2>Why Choose VenRAG</h2>
+            <p class="about-tagline">Transforming Data Complexity into Competitive Advantage</p>
+          </div>
+          <div class="about-content">
+            <div class="about-story">
+              <h3>Our Journey</h3>
+              <p>Born from the intersection of cutting-edge AI and enterprise data challenges, VenRAG emerged as a solution to unlock the true potential of unstructured data.</p>
+            </div>
+            <div class="differentiators-grid">
+              <div class="differentiator">
+                <i class="fas fa-brain"></i>
+                <h4>Advanced AI Technology</h4>
+              </div>
+              <div class="differentiator">
+                <i class="fas fa-puzzle-piece"></i>
+                <h4>Seamless Integration</h4>
+              </div>
+              <div class="differentiator">
+                <i class="fas fa-headset"></i>
+                <h4>24/7 Expert Support</h4>
+              </div>
+              <div class="differentiator">
+                <i class="fas fa-magic"></i>
+                <h4>Custom Solutions</h4>
+              </div>
+            </div>
+            <div class="about-mission">
+              <h3>Our Mission</h3>
+              <p>To empower enterprises by transforming complex, unstructured data into clear, actionable intelligence.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VenRAG Chat Section -->
+      <section id="venrag-chat" class="page">
+        <div class="container">
+          <div class="chat-hero">
+            <h2>VenRAG Chat: Your AI Data Companion</h2>
+            <p class="chat-tagline">Transform Complex Data into Instant Insights</p>
+          </div>
+          <div class="chat-overview">
+            <div class="chat-description">
+              <p>VenRAG Chat is more than a tool—it's your intelligent data partner. Seamlessly navigate through mountains of unstructured information, extracting meaningful insights with unprecedented speed and accuracy.</p>
+            </div>
+            <div class="how-it-works">
+              <h3>How VenRAG Chat Works</h3>
+              <div class="workflow-steps">
+                <div class="workflow-step">
+                  <div class="step-icon">
+                    <i class="fas fa-cloud-upload"></i>
+                  </div>
+                  <h4>Upload Documents</h4>
+                  <p>Integrate PDFs, Word files, spreadsheets, and more seamlessly.</p>
+                </div>
+                <div class="workflow-step">
+                  <div class="step-icon">
+                    <i class="fas fa-question-circle"></i>
+                  </div>
+                  <h4>Ask Your Question</h4>
+                  <p>Pose queries in natural language and get context-aware answers.</p>
+                </div>
+                <div class="workflow-step">
+                  <div class="step-icon">
+                    <i class="fas fa-bolt"></i>
+                  </div>
+                  <h4>Instant Insights</h4>
+                  <p>Receive precise, actionable responses extracted directly from your documents.</p>
+                </div>
+              </div>
+            </div>
+            <div class="key-features">
+              <h3>Powerful Features</h3>
+              <div class="features-grid">
+                <div class="feature">
+                  <i class="fas fa-file-alt"></i>
+                  <h4>Universal Document Support</h4>
+                  <p>Handles all document formats without limitations</p>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-infinity"></i>
+                  <h4>No Token Limits</h4>
+                  <p>Process extensive documents without restrictions</p>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-lock"></i>
+                  <h4>Enterprise-Grade Security</h4>
+                  <p>Robust data privacy and compliance protocols</p>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-chart-line"></i>
+                  <h4>Advanced Analytics</h4>
+                  <p>Insights beyond simple text extraction</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cta-section">
+            <h3>Ready to Unlock Your Data?</h3>
+            <p>Experience the future of intelligent document interaction</p>
+            <button onclick="navigateTo('contact', event)">Request a Demo</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Future Innovations Section -->
+      <section id="future" class="page">
+        <div class="container">
+          <div class="innovations-hero">
+            <h2>Redefining Intelligent Interaction</h2>
+            <p class="innovations-tagline">Where AI Meets Unprecedented Precision</p>
+          </div>
+          <!-- Innovations content goes here... -->
+          <div class="innovations-cta">
+            <h3>Ready to Experience the Future of AI?</h3>
+            <p>Explore how VenRAG is pushing the boundaries of intelligent data interaction</p>
+            <button onclick="navigateTo('contact', event)">Schedule Innovation Briefing</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Industries Section -->
+      <section id="industries" class="page">
+        <div class="container">
+          <div class="industries-header">
+            <h2>Industry-Specific AI Solutions</h2>
+            <p class="industries-tagline">Transforming Data Intelligence Across Sectors</p>
+          </div>
+          <!-- Industries content goes here... -->
+          <div class="industries-cta">
+            <h3>Unlock Industry-Specific Insights</h3>
+            <p>Discover how VenRAG can transform your sector's data intelligence</p>
+            <button onclick="navigateTo('contact', event)">Request Sector-Specific Demo</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="page">
+        <div class="container">
+          <h2>Let's Connect</h2>
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name *</label>
+                <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+              </div>
+              <div class="form-group">
+                <label>Last Name *</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Business Email *</label>
+              <input type="email" id="businessEmail" name="businessEmail" placeholder="Your Business Email" required>
+            </div>
+            <div class="form-group">
+              <label>Tell Us About Your Requirements *</label>
+              <textarea id="requirements" name="requirements" placeholder="Describe your business needs and how VenRAG can help" required></textarea>
+            </div>
+            <p class="required-fields-note">* All fields are required</p>
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="emailConsent" name="emailConsent">
+              <label for="emailConsent">I agree to receive email communication from VenRAG</label>
+            </div>
+            <button type="submit" class="request-demo-btn">Submit</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-container">
+        <p>2025 VenRAG - All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#about" data-target="about" class="nav-link">About</a>
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#terms">Terms of Use</a>
+        </div>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+  <script src="main.js" defer></script>
+</body>
+</html>
