@@ -1,10 +1,100 @@
-<section id="contact" class="page">
-  <div class="container">
-    <div class="page-content">
-      <div class="contact-header">
-        <h2>Contact Us</h2>
-        <p class="contact-tagline">Get in touch to learn more about VenRAG</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VenRAG | Contact</title>
+  <meta name="description" content="Get in touch to learn more about VenRAG and request a demo">
+  <link rel="preload" href="logo/VenRAG_logo.PNG" as="image">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="logo/VenRAG_logo.PNG">
+</head>
+<body>
+  <!-- Page Transition Overlay -->
+  <div class="page-transition">
+    <img src="logo/VenRAG_logo.PNG" alt="VenRAG Logo" class="transition-logo">
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <div class="logo-container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="logo/VenRAG_logo.PNG" alt="VenRAG Logo" class="logo-img">
+          </a>
+        </div>
+        <h1 class="header-title">VenRAG</h1>
+      </div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i><span>Home</span></a></li>
+          <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i><span>About</span></a></li>
+          <li><a href="venrag-chat.html" class="nav-link"><i class="fas fa-comments"></i><span>VenRAG Chat</span></a></li>
+          <li><a href="future.html" class="nav-link"><i class="fas fa-rocket"></i><span>Innovations</span></a></li>
+          <li><a href="industries.html" class="nav-link"><i class="fas fa-industry"></i><span>Industries</span></a></li>
+          <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Main Content -->
+  <main>
+    <section id="contact" class="page active">
+      <div class="container">
+        <h2>Let's Connect</h2>
+        <div class="contact-form-container">
+            <form id="contactForm">
+            <div class="form-row">
+                <div class="form-group">
+                <label>First Name *</label>
+                <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                </div>
+                <div class="form-group">
+                <label>Last Name *</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Business Email *</label>
+                <input type="email" id="businessEmail" name="businessEmail" placeholder="Your Business Email" required>
+            </div>
+            <div class="form-group">
+                <label>Tell Us About Your Requirements *</label>
+                <textarea id="requirements" name="requirements" placeholder="Describe your business needs and how VenRAG can help" required></textarea>
+            </div>
+            <p class="required-fields-note">* All fields are required</p>
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="emailConsent" name="emailConsent">
+                <label for="emailConsent">I agree to receive email communication from VenRAG</label>
+            </div>
+            <button type="submit" class="request-demo-btn">Submit</button>
+            </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <p>2025 VenRAG - All rights reserved.</p>
+      <div class="footer-links">
+        <a href="about.html" class="nav-link">About</a>
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms of Use</a>
+      </div>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
       </div>
     </div>
-  </div>
-</section>
+  </footer>
+  
+  <script src="script.js" defer></script>
+</body>
+</html>
