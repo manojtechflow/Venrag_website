@@ -75,6 +75,20 @@ document.addEventListener('DOMContentLoaded', function() {
     try {
       submitButton.innerHTML = '<span>Submitting...</span>';
       submitButton.disabled = true;
+      // Send the form data to Formspree
+      const response = await fetch("https://formspree.io/f/xqapeyzp", {
+        method: "POST",
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: formData
+      });
+      if (response.ok) {
+        alert('Thank you for your interest! We will contact you soon.');
+        document.getElementById('contactForm').reset();
+      } else {
+        alert('An error occurred. Please try again later.');
+      }
       // Simulate form submission delay
       await new Promise(resolve => setTimeout(resolve, 1500));
       alert('Thank you for your interest! We will contact you soon.');
