@@ -1,15 +1,15 @@
 /* ==========================================================================
    Global Variables & Reset
    ========================================================================== */
-   :root {
-    --primary-color: #d30000;       /* Dark red for company theme */
-    --secondary-color: #ff5252;     /* Lighter red for accents */
-    --accent-color: #ff9e80;        /* Soft coral for highlights */
-    --text-dark: #1a1a2e;           /* Deep navy for text */
-    --text-light: #4b4b6a;          /* Soft slate for secondary text */
-    --background-light: #f9f3f3;    /* Soft, professional background with red tint */
-  }
   
+   :root {
+    --primary-color: #fdfdfe;      /* Dark gray background */
+    --secondary-color: #2C2C2C;    /* Slightly lighter gray for sections */
+    --accent-color: #FF5F57;       /* Vibrant coral accent */
+    --text-dark: #E1E1E1;          /* Light gray text for readability */
+    --text-light: #B0B0B0;         /* Muted gray for secondary text */
+    --background-light: #00000;   /* Off-white background for contrast */
+}
   * {
     margin: 0;
     padding: 0;
@@ -27,13 +27,15 @@
     letter-spacing: -0.02em;
     min-height: 100vh;
     position: relative;
-    background-image: url('logo/VenRAG_logo_background.jpg');
+    background-image: url('./logo/VenRAAG_logo_background.jpeg');
+    /* color: wheat; */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-blend-mode: overlay;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-blend-mode: var(--accent-color);
+    /* background: linear-gradient(135deg, #0a0a0a, #1f1f1f, #3a3a3a, #1f1f1f, #0a0a0a); */
+    background-color: rgba(8, 0, 0, 0.95);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -47,6 +49,16 @@
   main {
     flex: 1;
   }
+
+  .blur {
+    backdrop-filter: blur(5px); /* Apply blur to the background */
+  }
+
+  p {
+    text-align: center;
+    margin: 0 auto;
+
+}
   
   /* ==========================================================================
      Typography
@@ -76,10 +88,12 @@
   
   h3 {
     font-size: 1.75rem;
+    
   }
   
   h4 {
     font-size: 1.25rem;
+    
   }
   
   p {
@@ -118,8 +132,9 @@
      Navigation & Header
      ========================================================================== */
   header {
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background-color: black;
+    /*background: linear-gradient(135deg, #0a0a0a, #1f1f1f, #3a3a3a, #1f1f1f, #0a0a0a);*/
+    backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
     padding: 1rem 0;
@@ -152,9 +167,9 @@
   .header-title {
     font-size: 1.5rem;    /* Reduced font size */
     margin-left: 0rem;  /* Gap between logo and title */
-    line-height: 35px;    /* Align title with logo */
+    line-height: 30px;    /* Align title with logo */
   }
-  
+    
   .nav-list {
     display: flex;
     list-style: none;
@@ -184,32 +199,45 @@
   
   .nav-link:hover,
   .nav-link.active {
-    color: var(--primary-color);
-    background-color: rgba(211, 0, 0, 0.1);
+    color: #007bff;
+    background-color: rgba(0, 18, 211, 0.15);
   }
+
+  .nav-links a {
+    margin: 0 15px; /* Add space between links */
+    text-decoration: none;
+    color: #E1E1E1; /* Updated to match footer background */
+    font-size: 16px;
+  }
+  
+  .nav-links a:hover {
+    color: #007bff; /*Adding hover color for links */
+  }
+  
   
   /* ==========================================================================
      Button Styles
      ========================================================================== */
   button {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
+    color: rgb(0, 0, 0);
     border: none;
     padding: 12px 24px;
     border-radius: 6px;
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 15px rgba(211, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(15, 8, 8, 0.2);
     font-family: inherit;
     letter-spacing: -0.01em;
   }
   
   button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(211, 0, 0, 0.3);
+    box-shadow: 0 8px 25px rgb(0, 0, 0);
   }
-  
+
+
   /* ==========================================================================
      Page Transition Overlay
      ========================================================================== */
@@ -219,7 +247,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     display: none;
     justify-content: center;
     align-items: center;
@@ -313,17 +341,14 @@
   }
   
   .feature {
-    background: white;
+    background: rgba(8, 0, 0, 0.90);
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgb(0, 0, 0);
     text-align: center;
     transition: transform 0.3s ease;
   }
   
-  .feature:hover {
-    transform: translateY(-5px);
-  }
   
   .feature i {
     font-size: 2.5rem;
@@ -335,7 +360,8 @@
     font-size: 1.25rem;
     margin-bottom: 1rem;
   }
-  
+
+
   /* ==========================================================================
      About Page Styles
      ========================================================================== */
@@ -358,16 +384,18 @@
   
   .about-story,
   .about-mission {
-    background: white;
+    background:  rgba(8, 0, 0, 0.90);
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
+    text-align: center;
   }
   
   .about-story h3,
   .about-mission h3 {
     color: var(--primary-color);
     margin-bottom: 1rem;
+    text-align: center;
   }
   
   .differentiators-grid {
@@ -378,21 +406,22 @@
   }
   
   .differentiator {
-    background: white;
+    background:  rgba(8, 0, 0, 0.90);
     padding: 2rem;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
   }
   
   .differentiator i {
     font-size: 2.5rem;
     color: var(--primary-color);
     margin-bottom: 1.5rem;
+    text-align: center;
   }
   
   /* ==========================================================================
-     VenRAG Chat Page Styles
+     VenRAAG Chat Page Styles
      ========================================================================== */
   .chat-hero {
     text-align: center;
@@ -407,10 +436,10 @@
   }
   
   .chat-description {
-    background: white;
+    background:  rgba(8, 0, 0, 0.90);
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
     margin-bottom: 0.5rem;
     text-align: center;
   }
@@ -431,26 +460,26 @@
   }
   
   .workflow-step {
-    background: white;
+    background: rgba(8, 0, 0, 0.90);
     padding: 2rem;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
   }
   
   .step-icon {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    /* background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem;
+    margin: 0 auto 1rem;
   }
   
   .step-icon i {
-    font-size: 2rem;
+    font-size: 3rem;
     color: white;
   }
   
@@ -504,56 +533,62 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    /* color: #d30000; */
   }
   
   .innovation-block {
     display: flex;
-    background: white;
+    background:  rgba(8, 0, 0, 0.90);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
   }
   
-  .innovation-block:hover {
-    transform: translateY(-5px);
-  }
-  
-  .innovation-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 120px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  }
   
   .innovation-icon i {
     font-size: 3rem;
-    color: white;
+    color: black;
   }
   
   .innovation-content {
     padding: 2rem;
     flex: 1;
+    /* color: red; */
   }
   
   .innovation-content h3 {
     color: var(--primary-color);
+    /* color: #e0e0e0; */
     margin-bottom: 1rem;
+    text-align: center;
   }
   
   .innovation-example {
-    background: rgba(0, 0, 0, 0.03);
+    background:  rgba(8, 0, 0, 1.90);
     padding: 1.5rem;
     border-radius: 8px;
     margin-top: 1.5rem;
-    border-left: 4px solid var(--primary-color);
+    /* border-left: 4px solid var(--primary-color); */
+    /* border-top: 4px solid var(--primary-color);
+    border-left: 4px solid var(--primary-color); */
   }
   
   .innovation-example h4 {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
+    text-align: center;
   }
+
+  .innovation-cta {
+    text-align: center;
+    background:  rgba(8, 0, 0, 0.90);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
+    margin-top: 2rem;
+  }
+
   
   /* ==========================================================================
      Industries Page Styles
@@ -572,63 +607,48 @@
   
   .industry-showcase {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     gap: 2rem;
     margin-bottom: 3rem;
   }
   
   .industry-block {
     display: flex;
-    background: white;
+    background:  rgba(8, 0, 0, 0.90);
     border-radius: 12px;
     overflow: hidden;
+    height: fit-content;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    position: relative;
+    /* position: relative; */
   }
   
-  .industry-block:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(211, 0, 0, 0.2);
-  }
   
   .industry-block:before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 5px;
+    width: 0px;
     height: 100%;
     background: var(--primary-color);
   }
   
-  .industry-icon {
-    width: 120px;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    flex-shrink: 0;
-  }
-  
-  .industry-icon i {
-    font-size: 3rem;
-    color: white;
-  }
-  
   .industry-content {
-    padding: 2rem;
+    padding: 1rem;
     flex: 1;
   }
   
   .industry-content h3 {
     color: var(--primary-color);
+    text-align: left;
     margin-bottom: 1rem;
     font-size: 1.5rem;
   }
   
   .industry-content p {
+    text-align: left;
+    margin-left: 0;
     margin-bottom: 1.5rem;
     font-size: 1.05rem;
   }
@@ -661,7 +681,7 @@
   
   .industries-cta {
     text-align: center;
-    background: white;
+    background:   rgba(8, 0, 0, 0.90);
     padding: 2.5rem;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -758,7 +778,7 @@
   .contact-form-container {
     max-width: 600px; /* narrower width */
     margin: 0 auto;   /* center it horizontally */
-    background: white;
+    background: rgba(8, 0, 0, 0.55);
     padding: 2.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -796,9 +816,10 @@
   .form-group textarea {
     width: 100%;
     padding: 0.85rem;
+    color: white;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
-    background: #f8f9fa;
+    background: rgba(0, 0, 0, 0.6);
   }
   
   .form-group textarea {
@@ -843,7 +864,7 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    background: linear-gradient(145deg, #d30000, #ff1a1a);
+    background: rgb(4, 31, 96);
     border: none;
     color: white;
     border-radius: 8px;
@@ -854,7 +875,7 @@
   
   .request-demo-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(211, 0, 0, 0.3);
+    box-shadow: 0 8px 25px #007bff;
   }
   
   /* ==========================================================================
@@ -917,35 +938,55 @@
     }
   }
   
-  /* ==========================================================================
-     Footer Styles
-     ========================================================================== */
+
   footer {
-    background-color: white;
-    padding: 2rem 0;
-    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.05);
-    margin-top: auto;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white; /* Ensures text is visible on black background */
+    backdrop-filter: blur(0); /* Initially no blur */
   }
   
   .footer-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Stack footer links and social media vertically */
     align-items: center;
+    justify-content: center;
+    text-align: center;
   }
   
-  .social-links {
-    display: flex;
-    gap: 1rem;
+  .footer-links {
+    display: flex; /* Use flexbox to keep the links in a row */
+    justify-content: center;
+    margin-bottom: 10px;
   }
   
-  .social-links a {
-    color: var(--text-light);
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
+  .footer-links a {
+    margin: 0 15px; /* Add space between links */
+    text-decoration: none;
+    color: #E1E1E1; /* Updated to match footer background */
+    font-size: 16px;
   }
   
-  .social-links a:hover {
-    color: var(--primary-color);
+  .footer-links a:hover {
+    color: #007bff; /*Adding hover color for links */
   }
   
+  .social-media {
+    margin-top: 10px;
+  }
   
+  .social-media a {
+    margin: 0 15px;
+    font-size: 30px;
+    color: white;
+  }
+  
+  .social-media a:hover {
+    color: #007bff; /* Adding hover color for social media icons */
+  }
+  
+
+
+  a {
+    text-decoration: none;
+  }

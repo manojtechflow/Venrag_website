@@ -88,3 +88,25 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
 });
+
+
+let lastScrollTop = 0;
+const header = document.querySelector('header');
+const footer = document.querySelector('footer');
+
+window.addEventListener('scroll', function () {
+  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  // Apply blur when scrolling
+  if (currentScroll > lastScrollTop) {
+    // Scrolling down, apply blur
+    header.style.backdropFilter = 'blur(8px)';
+    footer.style.backdropFilter = 'blur(8px)';
+  } else {
+    // Scrolling up, remove blur
+    header.style.backdropFilter = 'blur(8px)';
+    footer.style.backdropFilter = 'blur(8px)';
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative scroll value
+});
