@@ -39,9 +39,20 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       
       // Validate Business Email
-      if (!email.value.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
-        showError(email, 'Please enter a valid business email address');
+      // Validate Business Email
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      const forbiddenDomains = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'live.com'];
+         
+      if (!emailRegex.test(email.value)) {
+        showError(email, 'Please enter a valid or professional email address');
         isValid = false;
+      } else {
+        // Extract the domain using optional chaining to avoid errors if "@" is missing
+        const domain = email.value.split('@')[1]?.toLowerCase();
+        if (!domain || forbiddenDomains.includes(domain)) {
+          showError(email, 'Please enter a valid or professional email address');
+          isValid = false;
+        }
       }
       
       // Validate Requirements (minimum 20 characters)
