@@ -39,14 +39,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
-  /* On mobile devices, disable fixed background for a smoother scrolling experience */
-  @media (max-width: 768px) {
-    body {
-      background-attachment: scroll;
-      background-size: cover;
-    }
-  }
 
   #mainContent {
     display: flex;
