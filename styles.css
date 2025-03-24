@@ -40,6 +40,13 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
+  /* On mobile devices, disable fixed background for a smoother scrolling experience */
+  @media (max-width: 768px) {
+    body {
+      background-attachment: scroll;
+    }
+  }
+
   #mainContent {
     display: flex;
     flex-direction: column;
