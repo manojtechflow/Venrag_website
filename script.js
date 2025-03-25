@@ -135,3 +135,12 @@ window.addEventListener('scroll', function () {
 
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative scroll value
 });
+
+function toggleMenu() {
+  var menu = document.getElementById("navMenu");
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}

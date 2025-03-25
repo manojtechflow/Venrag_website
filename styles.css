@@ -170,6 +170,38 @@
     line-height: 30px;    /* Align title with logo */
   }
     
+  .menu-icon {
+    display: none; /* Hide by default, show in mobile view */
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block; /* Show menu icon in mobile view */
+    }
+    .nav-menu {
+      display: none; /* Hide full menu by default in mobile view */
+      position: absolute;
+      background-color: #fff;
+      width: 100%;
+      top: 60px; /* Adjust based on your header's height */
+      left: 0;
+      z-index: 1000;
+    }
+  
+    .nav-list {
+      flex-direction: column; /* Stack menu items vertically */
+    }
+  
+    .nav-link {
+      display: block;
+      padding: 10px;
+      color: black; /* Adjust color as needed */
+      text-decoration: none;
+    }
+  }
+  
   .nav-list {
     display: flex;
     list-style: none;
