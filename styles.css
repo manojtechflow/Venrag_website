@@ -170,60 +170,54 @@
     line-height: 30px;    /* Align title with logo */
   }
     
-  /* Base styles for the header */
   .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative; /* Ensure positioning context for the dropdown */
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  /* Hamburger icon positioning */
 .menu-icon {
-    cursor: pointer;
-    display: none; /* Initially hidden on desktop */
-    position: absolute;
-    right: 20px; /* Adjust as necessary */
-    top: 20px; /* Adjust as necessary */
-    z-index: 1500; /* Higher than the nav menu */
-  }
-  
-  /* Responsive styles */
+  display: none; /* Hide by default, will be shown in mobile view */
+  cursor: pointer;
+  font-size: 30px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
 @media (max-width: 768px) {
   .menu-icon {
-    display: block; /* Show on mobile */
+    display: block;
   }
 
   .nav-menu {
-    display: none; /* Hidden until toggled */
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: none;
+    position: fixed;
+    background-color: #fff;
     width: 100%;
-    background-color: #343333; /* Or any color that fits the design */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    z-index: 1400; /* Ensures it is above other content but below the icon */
+    top: 60px; /* Adjust based on your header's height */
+    left: 0;
+    z-index: 1000;
   }
 
   .nav-list {
-    list-style: none;
-    padding: 0;
+    list-style-type: none;
     margin: 0;
-    width: 100%; /* Full width to cover the header */
+    padding: 0;
+    text-align: left;
   }
 
   .nav-link {
     display: block;
-    padding: 15px 20px;
+    padding: 12px;
+    color: black;
     text-decoration: none;
-    color: black; /* Or any other color as per design */
-    border-bottom: 1px solid #eee; /* Optional */
   }
 
   .nav-link:hover {
-    background-color: #f4f4f4;
+    background-color: #f1f1f1;
   }
-  }
+}
 
   .nav-list {
     display: flex;
