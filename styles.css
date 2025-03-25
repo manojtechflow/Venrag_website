@@ -148,7 +148,7 @@
     justify-content: space-between;
     align-items: center;
   }
-  
+
   .logo-container {
     display: flex;
     margin-left: -120px;       /* Remove negative margin */
@@ -163,19 +163,24 @@
     height: 30px;
     width: auto;
   }
-  
   .header-title {
     font-size: 1.5rem;    /* Reduced font size */
     margin-left: 0rem;  /* Gap between logo and title */
     line-height: 30px;    /* Align title with logo */
   }
-    
-  .header-container {
+  
+  .desktop-nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
   
+  .mobile-nav {
+    display: none;
+  }
+  
+  .menu-icon {
+    display: none;
+  }
+
   .menu-icon {
     display: none; /* Hide by default, will be shown in mobile view */
     cursor: pointer;
@@ -183,44 +188,11 @@
     position: absolute;
     right: 10px;
     top: 10px;
+    z-index: 1500; /* Make sure it's above all content */
   }
-
-  @media (max-width: 768px) {
-    .menu-icon {
-      display: block;
-    }
   
-    .nav-menu {
-      display: none;
-      position: fixed;
-      background-color: #fff;
-      width: 100%;
-      top: 60px; /* Adjust based on your header's height */
-      left: 0;
-      z-index: 1000;
-    }
-  
-    .nav-list {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      text-align: left;
-    }
-  
-    .nav-link {
-      display: block;
-      padding: 12px;
-      color: black;
-      text-decoration: none;
-    }
-  
-    .nav-link:hover {
-      background-color: #f1f1f1;
-    }
-  }
-
-  
-  .nav-list {
+  /* Desktop Navigation Styles */
+  .desktop-nav .nav-list {
     display: flex;
     list-style: none;
     align-items: center;
@@ -230,7 +202,7 @@
     margin-left: auto;
   }
   
-  .nav-link {
+  .desktop-nav .nav-link {
     color: var(--text-light);
     font-weight: 500;
     text-decoration: none;
@@ -243,29 +215,57 @@
     font-size: 0.95rem;
   }
   
-  .nav-link i {
+  .desktop-nav .nav-link i {
     font-size: 1.2rem;
   }
   
-  .nav-link:hover,
-  .nav-link.active {
+  .desktop-nav .nav-link:hover,
+  .desktop-nav .nav-link.active {
     color: #007bff;
     background-color: rgba(0, 18, 211, 0.15);
   }
-
-  .nav-links a {
-    margin: 0 15px; /* Add space between links */
-    text-decoration: none;
-    color: #E1E1E1; /* Updated to match footer background */
-    font-size: 16px;
+  
+  /* Mobile Navigation Styles - Hidden by default */
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block;
+    }
+  
+    .desktop-nav {
+      display: none; /* Hide desktop nav in mobile view */
+    }
+  
+    .mobile-nav {
+      display: none; /* Hidden by default, shown on toggle */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      z-index: 1400; /* Ensure it is below the menu icon */
+    }
+  
+    .mobile-nav .nav-list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      flex-direction: column;
+    }
+  
+    .mobile-nav .nav-link {
+      display: block;
+      padding: 12px 20px;
+      color: black;
+      text-decoration: none;
+    }
+  
+    .mobile-nav .nav-link:hover {
+      background-color: #f1f1f1;
+    }
   }
   
-  .nav-links a:hover {
-    color: #007bff; /*Adding hover color for links */
-  }
-  
-  
-  /* ==========================================================================
+/* ==========================================================================
      Button Styles
      ========================================================================== */
   button {

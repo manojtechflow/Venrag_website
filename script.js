@@ -137,22 +137,32 @@ window.addEventListener('scroll', function () {
 });
 
 function toggleMenu() {
-  var menu = document.getElementById("navMenu");
-  if (window.innerWidth < 769) { // Checks if the device width is less than 769px
-    if (menu.style.display === "block") {
-      menu.style.display = "none";
-    } else {
-      menu.style.display = "block";
-    }
+  const menu = document.getElementById("mobileNav");
+
+  if (window.innerWidth < 769) {
+    // Toggle visibility
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
   }
 }
 
-// Close the menu by clicking outside of it
+// Close mobile menu when clicking outside
 document.addEventListener('click', function(event) {
-  var menu = document.getElementById("navMenu");
-  var menuButton = document.querySelector(".menu-icon");
-  // Check if the clicked element is not the menu or the menu button
-  if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
+  const menu = document.getElementById("mobileNav");
+  const menuButton = document.querySelector(".menu-icon");
+
+  if (
+    window.innerWidth < 769 && // Only apply on mobile
+    menu.style.display === "block" &&
+    !menu.contains(event.target) &&
+    !menuButton.contains(event.target)
+  ) {
     menu.style.display = "none";
   }
+});
+
+// Close mobile menu on nav link click
+document.querySelectorAll("#mobileNav .nav-link").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("mobileNav").style.display = "none";
+  });
 });
