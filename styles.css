@@ -183,7 +183,7 @@
     .nav-menu {
       display: none; /* Hide full menu by default in mobile view */
       position: absolute;
-      background-color: #0a0a0a;
+      background-color: #fff;
       width: 100%;
       top: 60px; /* Adjust based on your header's height */
       left: 0;
@@ -201,7 +201,7 @@
       text-decoration: none;
     }
   }
-
+  
   .nav-list {
     display: flex;
     list-style: none;
