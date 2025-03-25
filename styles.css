@@ -39,6 +39,16 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  /* For mobile devices */
+  @media (max-width: 768px) {
+    body {
+      /* Remove fixed attachment for mobile if causing issues */
+      background-attachment: scroll;
+      /* Ensure the background image still covers the viewport */
+      background-size: cover;
+      background-position: center center;
+    }
+  }
 
   #mainContent {
     display: flex;
