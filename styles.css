@@ -42,11 +42,10 @@
   /* For mobile devices */
   @media (max-width: 768px) {
     body {
-      /* Remove fixed attachment for mobile if causing issues */
-      background-attachment: scroll;
-      /* Ensure the background image still covers the viewport */
+      background-image: url('./logo/VenRAAG_logo_background_mobile.jpg');
       background-size: cover;
       background-position: center center;
+      background-attachment: scroll; /* Usually better for mobile */
     }
   }
 
