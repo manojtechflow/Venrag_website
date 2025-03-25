@@ -164,6 +164,12 @@
     width: auto;
   }
   
+  .header-title {
+    font-size: 1.5rem;    /* Reduced font size */
+    margin-left: 0rem;  /* Gap between logo and title */
+    line-height: 30px;    /* Align title with logo */
+  }
+    
   .header-container {
     display: flex;
     justify-content: space-between;
@@ -178,7 +184,7 @@
     right: 10px;
     top: 10px;
   }
-  
+
   @media (max-width: 768px) {
     .menu-icon {
       display: block;
@@ -212,6 +218,7 @@
       background-color: #f1f1f1;
     }
   }
+
   
   .nav-list {
     display: flex;
