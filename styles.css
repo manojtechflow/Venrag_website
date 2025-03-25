@@ -256,12 +256,14 @@
     .mobile-nav .nav-link {
       display: block;
       padding: 12px 20px;
-      color: black;
+      color: white;
       text-decoration: none;
     }
   
-    .mobile-nav .nav-link:hover {
-      background-color: #007bff;
+    .mobile-nav .nav-link:hover,
+    .mobile-nav .nav-link.active {
+      color: #007bff;
+      background-color: rgba(0, 18, 211, 0.15);
     }
   }
   
