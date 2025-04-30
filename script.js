@@ -137,12 +137,11 @@ window.addEventListener('scroll', function () {
 });
 
 function toggleMenu() {
-  const menu = document.getElementById("mobileNav");
-
-  if (window.innerWidth < 769) {
-    // Toggle visibility
-    menu.style.display = (menu.style.display === "block") ? "none" : "block";
-  }
+  const mobileNav = document.getElementById('mobileNav');
+  mobileNav.classList.toggle('active');
+  
+  // Optional: Toggle hamburger icon animation
+  document.querySelector('.menu-icon').classList.toggle('open');
 }
 
 // Close mobile menu when clicking outside
