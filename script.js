@@ -166,3 +166,17 @@ document.querySelectorAll("#mobileNav .nav-link").forEach(link => {
     document.getElementById("mobileNav").style.display = "none";
   });
 });
+
+// Tab switching logic
+const tabs = document.querySelectorAll('.tab-list .tab');
+const contents = document.querySelectorAll('.tab-content');
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    // deactivate all
+    tabs.forEach(t => t.classList.remove('active'));
+    contents.forEach(c => c.classList.remove('active'));
+    // activate clicked
+    tab.classList.add('active');
+    document.getElementById(tab.dataset.target).classList.add('active');
+  });
+});

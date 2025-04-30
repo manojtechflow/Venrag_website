@@ -20,6 +20,11 @@
     </a>
   </div>
 
+  <!-- Announcement bar -->
+  <div class="announcement-bar">
+    Introducing Enclara: your on-premises domain expert, engineered for peak performance on minimal compute. Coming soon!
+  </div>
+
   <!-- Header -->
   <header>
     <div class="container header-container">
@@ -29,16 +34,20 @@
             <img src="../logo/VenRAAG_logo.JPG" alt="VenRAAG Logo" class="logo-img">
           </a>
         </div>
-        <h1 class="header-title">VenRAAG</h1>
+        <a href="../Home">
+          <h1 class="header-title">VenRAAG</h1>
+          </a>
       </div>
       <nav class="desktop-nav">
         <ul class="nav-list">
-            <li><a href="../Home" class="nav-link"><i class="fas fa-home"></i><span>Home</span></a></li>
-            <li><a href="../About" class="nav-link"><i class="fas fa-info-circle"></i><span>About</span></a></li>
-            <li><a href="../VenRAAG-Chat" class="nav-link"><i class="fas fa-comments"></i><span>VenRAAG Chat</span></a></li>
-            <li><a href="../Future" class="nav-link"><i class="fas fa-rocket"></i><span>Innovations</span></a></li>
-            <li><a href="../Industries" class="nav-link"><i class="fas fa-industry"></i><span>Industries</span></a></li>
-            <li><a href="../Contact" class="nav-link"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+            <li><a href="../Home" class="nav-link"><span>Home</span></a></li>
+            <li><a href="../About" class="nav-link"><span>About</span></a></li>
+            <li><a href="../Solutions" class="nav-link"><span>Solutions</span></a></li>
+            <li><a href="../Industries" class="nav-link"><span>Industries</span></a></li>
+        </ul>
+        <ul class="nav-list-cta">
+          <li><a href="../TalkToExpert" class="nav-link cta"><span>Talk to an Expert</span></a></li>
+          <li><a href="../Demo" class="nav-link cta"><span>Request Demo</span></a></li>
         </ul>
       </nav>
     
@@ -47,85 +56,142 @@
           <i class="fas fa-bars"></i> <!-- Hamburger Icon -->
       </div>
       <nav class="mobile-nav" id="mobileNav">
-          <ul class="nav-list">
-              <li><a href="../Home" class="nav-link">Home</a></li>
-              <li><a href="../About" class="nav-link">About</a></li>
-              <li><a href="../VenRAAG-Chat" class="nav-link">VenRAAG Chat</a></li>
-              <li><a href="../Future" class="nav-link">Innovations</a></li>
-              <li><a href="../Industries" class="nav-link">Industries</a></li>
-              <li><a href="../Contact" class="nav-link">Contact</a></li>
-          </ul>
-      </nav>
+        <ul class="nav-list">
+            <li><a href="../Home" class="nav-link">Home</a></li>
+            <li><a href="../About" class="nav-link">About</a></li>
+            <li><a href="../Solutions" class="nav-link">Solutions</a></li>
+            <li><a href="../Industries" class="nav-link">Industries</a></li>
+            <li><a href="../TalkToExpert" class="nav-link">Talk to an Expert</a></li>
+            <li><a href="../Demo" class="nav-link">Request Demo</a></li>
+        </ul>
+    </nav>
     </div>
   </header>
   
   <!-- Main Content -->
   <main>
-    <section id="industries" class="page active">
+  <!-- Industries Page -->
+  <section id="industries" class="page active">
+    <div class="industry-hero">
       <div class="container">
-        <div class="industries-header">
-          <h2>Industry-Specific AI Solutions</h2>
-          <p class="industries-tagline">Transforming Data Intelligence Across Sectors</p>
-        </div>
-        
-        <div class="industry-showcase">
-          <div class="industry-block financial-services">
-            <div class="industry-icon">
-              <!-- <i class="fas fa-chart-line" style="color: red;"></i> -->
-            </div>
-            <div class="industry-content">
-              <h3>Financial Services</h3>
-              <p>Transform financial data management with AI-powered document intelligence. Instantly extract insights from complex financial documents.</p>
-            </div>
-          </div>
-          
-          <div class="industry-block legal-compliance">
-            <div class="industry-icon">
-              <!-- <i class="fas fa-balance-scale" style="color: red;"></i> -->
-            </div>
-            <div class="industry-content">
-              <h3>Legal & Compliance</h3>
-              <p>Quickly retrieve contracts, regulations, and policies with unparalleled precision.</p>
-            </div>
-          </div>
-          
-          <div class="industry-block healthcare">
-            <div class="industry-icon">
-              <!-- <i class="fas fa-briefcase-medical" style="color: red;"></i> -->
-            </div>
-            <div class="industry-content">
-              <h3>Healthcare & Pharma</h3>
-              <p>Process research documents and compliance files effortlessly, accelerating medical research and regulatory compliance.</p>
-            </div>
-          </div>
-          
-          <div class="industry-block enterprise">
-            <div class="industry-icon">
-              <!-- <i class="fas fa-building" style="color: red;"></i> -->
-            </div>
-            <div class="industry-content">
-              <h3>Enterprise & IT</h3>
-              <p>Smart access to technical documentation and manuals, enhancing knowledge management and operational efficiency.</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="industries-cta">
-          <h3>Unlock Industry-Specific Insights</h3>
-          <h4>Discover how VenRAAG can transform your sector's data intelligence</h4>
-          <button onclick="location.href='contact.html'">Request Sector-Specific Demo</button>
+        <div class="industry-header-content">
+          <h2 class="industry-main-title">Industry-Specific AI Solutions</h2>
+          <p class="industry-subtitle">Transform industry-specific data into actionable insights with domain-optimized AI</p>
         </div>
       </div>
-    </section>
-  </main>
-  
+    </div>
+
+    <div class="industry-mosaic">
+      <div class="mosaic-container">
+        <!-- Financial Services -->
+        <div class="mosaic-card financial-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img 
+                  src="../logo/bank.jpg" 
+                  alt="finance"
+                  class="card-image"
+              >
+            </div>
+            <div class="card-back">
+              <h4>Financial Services</h4>
+              <p>AI-driven analysis of complex financial documents, SEC filings, and market reports</p>
+              <ul class="industry-features">
+                <li>Regulatory compliance automation</li>
+                <li>Real-time financial reporting</li>
+                <li>Risk pattern detection</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Legal & Compliance -->
+        <div class="mosaic-card legal-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img 
+                  src="../logo/law.jpg" 
+                  alt="law"
+                  class="card-image"
+              >
+            </div>
+            <div class="card-back">
+              <h4>Legal Sector</h4>
+              <p>Instant retrieval of case law, contracts, and regulatory documents</p>
+              <ul class="industry-features">
+                <li>Clause comparison engine</li>
+                <li>Compliance tracking system</li>
+                <li>Deposition analysis</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Healthcare -->
+        <div class="mosaic-card health-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img 
+                  src="../logo/medical.jpg" 
+                  alt="Medical Intelligence"
+                  class="card-image"
+              >
+            </div>
+            <div class="card-back">
+              <h4>Healthcare & Pharma</h4>
+              <p>Accelerate research with AI-powered analysis of medical literature</p>
+              <ul class="industry-features">
+                <li>Clinical trial optimization</li>
+                <li>Regulatory document processing</li>
+                <li>Patient record analysis</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="mosaic-card enterprise-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img 
+                  src="../logo/Corporate.jpg" 
+                  alt="Corporate"
+                  class="card-image"
+              >
+            </div>
+            <div class="card-back">
+              <h4>Corporate Solutions</h4>
+              <p>Transform enterprise knowledge management with intelligent automation</p>
+              <ul class="industry-features">
+                <li>Technical documentation analysis</li>
+                <li>Cross-department knowledge sharing</li>
+                <li>Compliance automation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <section class="final-cta">
+    <div class="container">
+      <img src="../logo/VenRAAG_logo_blue.PNG" alt="VenRAAG Logo" class="final-cta-logo">
+      <div class="final-cta-content">
+      <h2>Ready for Sector-Specific AI?</h2>
+      <div class="final-cta-buttons">
+        <button onclick="location.href='./TalkToExpert'">Request a Demo</button>
+      </div>
+    </div>
+    </div>
+  </section>
 
   <footer>
     <div class="container footer-container">
       <div class="footer-links">
-        <a href="About/index.html" class="nav-link">About</a>
-        <a href="#privacy" class="nav-link">Privacy Policy</a>
-        <a href="#terms" class="nav-link">Terms of Use</a>
+        <a href="../About" class="nav-link">About</a>
+        <a href="../Privacy" class="nav-link">Privacy Policy</a>
+        <a href="../Terms" class="nav-link">Terms of Use</a>
       </div>
       <p>2025 VenRAAG - All rights reserved.</p>
       <div class="social-media">
