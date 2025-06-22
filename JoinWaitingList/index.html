@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VenRAAG | Contact</title>
-  <meta name="description" content="Get in touch to learn more about VenRAAG and request a demo">
+  <title>VenRAAG | Join Waiting List</title>
+  <meta name="description" content="Join the waiting list for early access to Enclaraa, the on-premises legal AI platform">
   <link rel="preload" href="../logo/VenRAAG_logo.JPG" as="image">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous">
@@ -56,6 +56,7 @@
             <li><a href="../Solutions" class="nav-link"><span>Legal Solutions</span></a></li>
         </ul>
         <ul class="nav-list-cta">
+          <li><a href="../TalkToExpert" class="nav-link cta"><span>Talk to an Expert</span></a></li>
           <li><a href="../Demo" class="nav-link cta"><span>Request Demo</span></a></li>
         </ul>
       </nav>
@@ -76,8 +77,9 @@
             <li><a href="../Features/knowledge-vault" class="nav-link sub-link">Knowledge Vault</a></li>
             <li><a href="../Features/security" class="nav-link sub-link">Enterprise Security</a></li>
             <li><a href="../Solutions" class="nav-link">Legal Solutions</a></li>
-            <li><a href="../TalkToExpert" class="nav-link-cta active">Talk to an Expert</a></li>
+            <li><a href="../TalkToExpert" class="nav-link-cta">Talk to an Expert</a></li>
             <li><a href="../Demo" class="nav-link-cta">Request Demo</a></li>
+            <li><a href="../JoinWaitingList" class="nav-link-cta active">Join Waiting List</a></li>
         </ul>
     </nav>
     </div>
@@ -85,11 +87,11 @@
   
   <!-- Main Content -->
   <main>
-    <section id="contact" class="page active">
+    <section id="waitinglist" class="page active">
       <div class="container">
-        <h2>Connect with Legal AI Experts!</h2>
+        <h2>Join the Enclaraa Waiting List</h2>
         <div class="contact-form-container">
-            <form id= "contactForm" action="https://formspree.io/f/your_form_id" method="POST">
+            <form id="waitingListForm" action="https://formspree.io/f/your_form_id" method="POST">
             <div class="form-row">
                 <div class="form-group">
                 <label>First Name *</label>
@@ -105,15 +107,40 @@
                 <input type="email" id="businessEmail" name="businessEmail" placeholder="Your Business Email" required>
             </div>
             <div class="form-group">
-                <label>Tell Us About Your Requirements *</label>
-                <textarea id="requirements" name="requirements" placeholder="Describe your business needs and how VenRAAG AI Team can help" required></textarea>
+                <label>Company/Organization *</label>
+                <input type="text" id="company" name="company" placeholder="Your Company or Organization" required>
+            </div>
+            <div class="form-group">
+                <label>Job Title *</label>
+                <input type="text" id="jobTitle" name="jobTitle" placeholder="Your Job Title" required>
+            </div>
+            <div class="form-group">
+                <label>Industry *</label>
+                <select id="industry" name="industry" required>
+                    <option value="" disabled selected>Select your industry</option>
+                    <option value="legal">Legal Services</option>
+                    <option value="corporate">Corporate Legal Department</option>
+                    <option value="government">Government</option>
+                    <option value="education">Education</option>
+                    <option value="finance">Finance</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>How would you like to use Enclaraa? *</label>
+                <textarea id="useCase" name="useCase" placeholder="Describe how you plan to use Enclaraa in your organization" required></textarea>
             </div>
             <p class="required-fields-note">* All fields are required</p>
             <div class="form-group checkbox-group">
                 <input type="checkbox" id="emailConsent" name="emailConsent">
-                <label for="emailConsent">I agree to receive email communication from VenRAAG</label>
+                <label for="emailConsent">I agree to receive product updates and early access information from VenRAAG</label>
             </div>
-            <button type="submit" class="request-demo-btn">Submit</button>
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="termsConsent" name="termsConsent" required>
+                <label for="termsConsent">I agree to VenRAAG's <a href="../Terms">Terms of Use</a> and <a href="../Privacy">Privacy Policy</a> *</label>
+            </div>
+            <button type="submit" class="request-demo-btn">Join Waiting List</button>
             </form>
         </div>
       </div>
@@ -128,8 +155,8 @@
           <img src="../logo/VenRAAG_logo_blue.png" alt="VenRAAG Logo" class="final-cta-logo">
         </div>
         <div class="final-cta-content">
-          <h2>Thank you for your interest in VenRAAG</h2>
-          <p>Our experts will be in touch with you shortly to discuss your specific needs.</p>
+          <h2>Thank you for joining the Enclaraa waiting list!</h2>
+          <p>You'll be among the first to know when Enclaraa is ready for early access. We'll keep you updated on our progress.</p>
         </div>
       </div>
     </div>
@@ -163,6 +190,3 @@
   <script src="../script.js" defer></script>
 </body>
 </html>
-
-
-
