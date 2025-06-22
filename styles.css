@@ -198,6 +198,26 @@
     white-space: nowrap;
   }
   
+  /* Mobile logo and header adjustments */
+  @media (max-width: 768px) {
+    .logo-container {
+      margin-left: 0;
+      margin-top: 10px;
+      justify-content: center;
+    }
+    
+    .logo-img {
+      height: 25px;
+      display: block;
+    }
+    
+    .header-title {
+      font-size: 1.2rem;
+      white-space: normal;
+      text-align: center;
+    }
+  }
+  
   .desktop-nav {
     position: relative;
     display: flex;
@@ -1079,6 +1099,36 @@
     align-items: flex-start;
   }
   
+  /* Mobile footer adjustments */
+  @media (max-width: 768px) {
+    .footer-flex-container {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+    
+    .footer-logo-container {
+      justify-content: center;
+    }
+    
+    .final-cta-content {
+      text-align: center;
+      align-items: center;
+    }
+    
+    .final-cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+    }
+    
+    .final-cta-buttons button {
+      width: 100%;
+      margin: 0;
+    }
+  }
+  
   .footer-separator {
     height: 1px;
     background-color: #E1E1E1; /* Simple white separator line */
@@ -1130,12 +1180,15 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    max-height: 400px; /* Limit maximum height */
   }
   
   .feature-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* Changed from cover to contain for better fitting */
+    max-width: 100%;
+    max-height: 100%;
   }
   
   .feature-content {
@@ -1226,20 +1279,64 @@
   @media (max-width: 992px) {
     .feature-box {
       flex-direction: column;
+      margin-bottom: 3rem;
     }
     
     .feature-image {
       width: 100%;
       min-height: 250px;
+      max-height: 300px;
     }
     
     .feature-content {
       width: 100%;
+      padding: 2rem 1.5rem;
     }
     
     .feature-box.image-right .feature-image,
     .feature-box.image-right .feature-content {
       order: unset;
+    }
+    
+    .feature-title {
+      font-size: 1.6rem;
+      text-align: center;
+    }
+    
+    .feature-subtitle {
+      font-size: 1.1rem;
+      text-align: center;
+    }
+    
+    .feature-summary {
+      text-align: center;
+      font-size: 1rem;
+    }
+    
+    .feature-explore {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+      max-width: 200px;
+    }
+  }
+  
+  /* Additional mobile adjustments for smaller screens */
+  @media (max-width: 576px) {
+    .feature-image {
+      min-height: 200px;
+    }
+    
+    .feature-content {
+      padding: 1.5rem 1rem;
+    }
+    
+    .feature-title {
+      font-size: 1.4rem;
+    }
+    
+    .feature-heading h2 {
+      font-size: 1.8rem;
     }
   }
   
@@ -1261,6 +1358,8 @@
     display: flex; /* Use flexbox to keep the links in a row */
     justify-content: center;
     margin-bottom: 5px; /* Reduced margin for slimmer appearance */
+    flex-wrap: wrap; /* Allow links to wrap on small screens */
+    gap: 10px; /* Space between wrapped items */
   }
   
   .footer-links a {
@@ -1268,16 +1367,40 @@
     text-decoration: none;
     color: #E1E1E1; /* Light color for text on blue background */
     font-size: 14px; /* Slightly smaller font for slimmer appearance */
+    padding: 5px 0; /* Add vertical padding for touch targets */
   }
   
   .social-media {
     margin-top: 5px; /* Reduced margin for slimmer appearance */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
   }
   
   .social-media a {
     margin: 0 15px;
     font-size: 30px;
     color: white;
+    padding: 5px;
+  }
+  
+  /* Mobile footer links adjustments */
+  @media (max-width: 576px) {
+    .footer-links {
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .footer-links a {
+      margin: 0;
+      padding: 8px 0;
+    }
+    
+    .social-media a {
+      margin: 0 10px;
+      font-size: 24px;
+    }
   }
   
   .social-media a:hover {
@@ -1301,7 +1424,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 5rem;             /* space between text and image */
-    padding: 3rem 0rem;    /* vertical spacing around the section */
+    padding: 3rem 1rem;    /* vertical spacing around the section with horizontal padding */
     border-radius: 0.75rem;
     background-color: var(--tile-color);  /* or whatever background fits */
     margin-bottom: 5rem;
@@ -1312,6 +1435,43 @@
     align-items: center;    /* vertical align */
     gap: 2rem;              /* space between text & image */
     flex-wrap: nowrap;      /* prevents overlap/wrapping */
+  }
+  
+  /* Mobile enclara section adjustments */
+  @media (max-width: 768px) {
+    .enclara-section {
+      margin-top: 4rem;
+      width: 95vw;
+      padding: 2rem 1rem;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    .enclara-inner {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .enclara-section .enclara-text h2 {
+      font-size: 1.75rem;
+      text-align: center;
+    }
+    
+    .enclara-section .enclara-text h3 {
+      font-size: 1.4rem;
+      text-align: center;
+    }
+    
+    .enclara-section .enclara-text p {
+      text-align: center;
+      font-size: 1rem;
+    }
+    
+    .waitlist-btn {
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+    }
   }
   .enclara-section .enclara-text,
   .enclara-section .enclara-image {
@@ -1329,6 +1489,29 @@
   .enclara-section .enclara-text p {
     color: var(--text-light);
     line-height: 1.6;
+  }
+  
+  /* Styling for the waitlist button */
+  .waitlist-btn {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.85rem 1.75rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .waitlist-btn:hover {
+    background-color: #d9c14a; /* Slightly darker gold */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
   
   /* Image styling */
