@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Workflow Hub | Enclaraa</title>
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="../../logo/VenRAAG_logo.JPG" as="image">
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Georgia:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../feature-styles.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../logo/VenRAAG_logo_icon.ico">
+</head>
+<body>
+    <!-- Page Transition Overlay -->
+    <div class="page-transition">
+        <a href="../../index.html">
+            <img src="../../logo/VenRAAG_logo.JPG" alt="VenRAAG Logo" class="transition-logo">
+        </a>
+    </div>
+
+    <!-- Announcement bar -->
+    <div class="announcement-bar">
+        Introducing Enclaraa: your on-premises legal expert, engineered for case analysis and legal document intelligence. Coming soon!
+        <span class="close-announcement" onclick="this.parentElement.style.display='none';"><i class="fas fa-times"></i></span>
+    </div>
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <div class="logo">
+                    <a href="../../index.html">
+                        <img src="../../logo/VenRAAG_logo.JPG" alt="LegalTech AI Logo" class="logo-img">
+                    </a>
+                </div>
+                <a href="../../index.html">
+                    <h1 class="header-title">Enclaraa | VenRAAG</h1>
+                </a>
+            </div>
+            <nav class="desktop-nav">
+                <ul class="nav-list">
+                    <li><a href="../../Home" class="nav-link"><span>Home</span></a></li>
+                    <li><a href="../../About" class="nav-link"><span>About</span></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link active"><span>Features</span></a>
+                        <div class="dropdown-content">
+                            <a href="../legal-intelligence">Legal Intelligence</a>
+                            <a href="../document-drafting">Document Drafting</a>
+                            <a href="../batch-review">Batch Review</a>
+                            <a href="../workflow-hub" class="active">Workflow Hub</a>
+                            <a href="../knowledge-vault">Knowledge Vault</a>
+                            <a href="../security">Enterprise Security</a>
+                        </div>
+                    </li>
+                    <li><a href="../../Solutions" class="nav-link"><span>Legal Solutions</span></a></li>
+
+                </ul>
+            </nav>
+            <ul class="nav-list-cta">
+                <li><a href="../../Demo" class="nav-link cta"><span>Request Demo</span></a></li>
+            </ul>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    <div class="mobile-nav" id="mobileNav">
+        <div class="container">
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="../../Home" class="nav-link">Home</a></li>
+                    <li><a href="../../About" class="nav-link">About</a></li>
+                    <li>
+                        <span class="nav-link dropdown-toggle" onclick="toggleFeaturesDropdown(event)">
+                            Features <i class="fas fa-chevron-down"></i>
+                        </span>
+                        <div class="features-dropdown">
+                            <a href="../legal-intelligence" class="nav-link sub-link">Legal Intelligence</a>
+                            <a href="../document-drafting" class="nav-link sub-link">Document Drafting</a>
+                            <a href="../batch-review" class="nav-link sub-link">Batch Review</a>
+                            <a href="../workflow-hub" class="nav-link sub-link active">Workflow Hub</a>
+                            <a href="../knowledge-vault" class="nav-link sub-link">Knowledge Vault</a>
+                            <a href="../security" class="nav-link sub-link">Enterprise Security</a>
+                        </div>
+                    </li>
+                    <li><a href="../../Solutions" class="nav-link">Legal Solutions</a></li>
+                    <li><a href="../../TalkToExpert" class="nav-link-cta">Talk to an Expert</a></li>
+                    <li><a href="../../Demo" class="nav-link-cta">Request Demo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    </header>
+
+    <main>
+        <!-- Feature Hero Section -->
+        <section class="feature-hero">
+            <div class="container">
+                <div class="feature-hero-content">
+                    <h1>Legal Workflow Hub</h1>
+                    <p class="feature-subtitle">Streamline Your Legal Practice</p>
+                    <p class="feature-description">
+                        Manage cases, deadlines, and team assignments with our purpose-built legal workflow system. Never miss a filing deadline or client deliverable again.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Simple Content Section -->
+        <section class="simple-content">
+            <div class="container">
+                <h2>What is Legal Workflow Hub?</h2>
+                <p>
+                    Legal Workflow Hub is a central command center for managing all your legal work. It helps law firms and legal departments organize cases, track deadlines, and coordinate team members in one place.
+                </p>
+                <p>
+                    Think of it as your legal project manager - keeping everything on schedule, everyone on the same page, and making sure nothing falls through the cracks.
+                </p>
+                
+                <h2>How Does It Help Lawyers?</h2>
+                <ul>
+                    <li>Prevents missed deadlines with automatic calendar alerts for court filings</li>
+                    <li>Reduces administrative time by automating routine case management tasks</li>
+                    <li>Improves team coordination by clearly showing who's responsible for what</li>
+                    <li>Provides clear visibility into case progress and upcoming work</li>
+                    <li>Creates accountability with task tracking and completion records</li>
+                </ul>
+                
+                <h2>Common Uses</h2>
+                <div class="simple-grid">
+                    <div class="simple-card">
+                        <h3>Litigation Management</h3>
+                        <p>Track court deadlines, document filings, and witness preparation across multiple cases.</p>
+                    </div>
+                    <div class="simple-card">
+                        <h3>Client Matter Tracking</h3>
+                        <p>Organize all work for each client with progress updates and upcoming deliverables.</p>
+                    </div>
+                    <div class="simple-card">
+                        <h3>Team Workload Balancing</h3>
+                        <p>See who's overloaded and who has capacity to take on new legal matters.</p>
+                    </div>
+                    <div class="simple-card">
+                        <h3>Deadline Compliance</h3>
+                        <p>Never miss a statute of limitations or filing deadline with automatic reminders.</p>
+                    </div>
+                </div>
+                
+                <h2>How It Works - Simple Steps</h2>
+                <ol class="simple-steps">
+                    <li>
+                        <strong>Set Up Your Practice Areas</strong><br>
+                        Create templates for different types of legal work (litigation, contracts, etc.)
+                    </li>
+                    <li>
+                        <strong>Add Your Cases and Matters</strong><br>
+                        Enter basic information about each case and let the system set up appropriate workflows
+                    </li>
+                    <li>
+                        <strong>Assign Team Members</strong><br>
+                        Delegate tasks to attorneys, paralegals, and staff with clear responsibilities
+                    </li>
+                    <li>
+                        <strong>Track Progress and Deadlines</strong><br>
+                        Monitor case status, upcoming deadlines, and team performance in real-time
+                    </li>
+                </ol>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="merged-footer">
+        <div class="footer-cta">
+            <div class="container footer-flex-container">
+                <div class="footer-logo-container">
+                    <img src="../../logo/VenRAAG_logo_blue.png" alt="VenRAAG Logo" class="final-cta-logo">
+                </div>
+                <div class="final-cta-content">
+                    <h2>Ready to see Enclaraa in action?</h2>
+                    <div class="final-cta-buttons">
+                        <button onclick="location.href='../../Demo'">Request a Demo</button>
+                        <button onclick="location.href='#ComingSoon'">Explore Enclaraa (Coming Soon!)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-separator"></div>
+        
+        <div class="footer-info">
+            <div class="container footer-container">
+                <div class="footer-links">
+                    <a href="../../About" class="nav-link">About</a>
+                    <a href="../../Privacy" class="nav-link">Privacy Policy</a>
+                    <a href="../../Terms" class="nav-link">Terms of Use</a>
+                </div>
+                <p>2025 Enclaraa | VenRAAG - All rights reserved.</p>
+                <div class="social-media">
+                    <a href="https://x.com/VenRAAG_X" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/venraag/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/venraag/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+</body>
+</html>

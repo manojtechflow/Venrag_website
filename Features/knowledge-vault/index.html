@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Vault | Enclaraa</title>
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="../../logo/VenRAAG_logo.JPG" as="image">
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Georgia:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../feature-styles.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../logo/VenRAAG_logo_icon.ico">
+</head>
+<body>
+    <!-- Page Transition Overlay -->
+    <div class="page-transition">
+        <a href="../../index.html">
+            <img src="../../logo/VenRAAG_logo.JPG" alt="VenRAAG Logo" class="transition-logo">
+        </a>
+    </div>
+
+    <!-- Announcement bar -->
+    <div class="announcement-bar">
+        Introducing Enclaraa: your on-premises legal expert, engineered for case analysis and legal document intelligence. Coming soon!
+        <span class="close-announcement" onclick="this.parentElement.style.display='none';"><i class="fas fa-times"></i></span>
+    </div>
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <div class="logo">
+                    <a href="../../index.html">
+                        <img src="../../logo/VenRAAG_logo.JPG" alt="LegalTech AI Logo" class="logo-img">
+                    </a>
+                </div>
+                <a href="../../index.html">
+                    <h1 class="header-title">Enclaraa | VenRAAG</h1>
+                </a>
+            </div>
+            <nav class="desktop-nav">
+                <ul class="nav-list">
+                    <li><a href="../../Home" class="nav-link"><span>Home</span></a></li>
+                    <li><a href="../../About" class="nav-link"><span>About</span></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link active"><span>Features</span></a>
+                        <div class="dropdown-content">
+                            <a href="../legal-intelligence">Legal Intelligence</a>
+                            <a href="../document-drafting">Document Drafting</a>
+                            <a href="../batch-review">Batch Review</a>
+                            <a href="../workflow-hub">Workflow Hub</a>
+                            <a href="../knowledge-vault" class="active">Knowledge Vault</a>
+                            <a href="../security">Enterprise Security</a>
+                        </div>
+                    </li>
+                    <li><a href="../../Solutions" class="nav-link"><span>Legal Solutions</span></a></li>
+
+                </ul>
+            </nav>
+            <ul class="nav-list-cta">
+                <li><a href="../../Demo" class="nav-link cta"><span>Request Demo</span></a></li>
+            </ul>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <div class="mobile-nav" id="mobileNav">
+            <div class="container">
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="../../Home" class="nav-link">Home</a></li>
+                    <li><a href="../../About" class="nav-link">About</a></li>
+                    <li>
+                        <span class="nav-link dropdown-toggle" onclick="toggleFeaturesDropdown(event)">
+                            Features <i class="fas fa-chevron-down"></i>
+                        </span>
+                        <div class="features-dropdown">
+                            <a href="../legal-intelligence" class="nav-link sub-link">Legal Intelligence</a>
+                            <a href="../document-drafting" class="nav-link sub-link">Document Drafting</a>
+                            <a href="../batch-review" class="nav-link sub-link">Batch Review</a>
+                            <a href="../workflow-hub" class="nav-link sub-link">Workflow Hub</a>
+                            <a href="../knowledge-vault" class="nav-link sub-link active">Knowledge Vault</a>
+                            <a href="../security" class="nav-link sub-link">Enterprise Security</a>
+                        </div>
+                    </li>
+                    <li><a href="../../Solutions" class="nav-link">Legal Solutions</a></li>
+                    <li><a href="../../TalkToExpert" class="nav-link-cta">Talk to an Expert</a></li>
+                    <li><a href="../../Demo" class="nav-link-cta">Request Demo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    </header>
+
+    <main>
+        <!-- Feature Hero Section -->
+        <section class="feature-hero">
+            <div class="container">
+                <div class="feature-hero-content">
+                    <h1>Knowledge Vault</h1>
+                    <p class="feature-subtitle">Your Secure, Searchable Legal Storage</p>
+                    <p class="feature-description">
+                        Store cases, contracts, and opinions with full access control and version tracking. Instantly searchable and ready to use across matters.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Simple Content Section -->
+        <section class="simple-content">
+            <div class="container">
+                <h2>What is Knowledge Vault?</h2>
+                <p>
+                    Knowledge Vault is a secure digital library for all your legal documents and information. It helps law firms and legal departments store, organize, and find their documents quickly and easily.
+                </p>
+                <p>
+                    Think of it as your firm's legal brain - a place where all your valuable legal knowledge is kept safe and made instantly accessible to the right people.
+                </p>
+                
+                <h2>How Does It Help Lawyers?</h2>
+                <ul>
+                    <li>Saves time by making documents easy to find with legal-specific search</li>
+                    <li>Keeps client information secure with strong access controls</li>
+                    <li>Prevents knowledge loss when lawyers leave your firm</li>
+                    <li>Makes it easy to reuse work from previous similar cases</li>
+                    <li>Creates a complete history of document changes and who accessed what</li>
+                </ul>
+                
+                <h2>Common Uses</h2>
+                <div class="simple-grid">
+                    <div class="simple-card">
+                        <h3>Precedent Management</h3>
+                        <p>Store and easily find previous case documents, briefs, and opinions to build on past work.</p>
+                    </div>
+                    <div class="simple-card">
+                        <h3>Contract Repository</h3>
+                        <p>Organize all client contracts with version tracking and quick clause search capabilities.</p>
+                    </div>
+                    <div class="simple-card">
+                        <h3>Legal Research Library</h3>
+                        <p>Build a searchable collection of research memos, case law summaries, and legal analyses.</p>
+                    </div>
+                    <div class="simple-card">
+                        <h3>Client Matter Management</h3>
+                        <p>Keep all documents for each client matter organized in one secure, accessible location.</p>
+                    </div>
+                </div>
+                
+                <h2>How It Works - Simple Steps</h2>
+                <ol class="simple-steps">
+                    <li>
+                        <strong>Upload Your Documents</strong><br>
+                        Import existing legal files from your current systems into the secure Knowledge Vault
+                    </li>
+                    <li>
+                        <strong>Organize Your Knowledge</strong><br>
+                        Set up folders by practice area, client, or matter type - or let our system suggest categories
+                    </li>
+                    <li>
+                        <strong>Set Access Permissions</strong><br>
+                        Control who can view, edit, or share each document based on roles or practice groups
+                    </li>
+                    <li>
+                        <strong>Search & Find Instantly</strong><br>
+                        Use plain language or legal terms to find exactly what you need in seconds
+                    </li>
+                </ol>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="merged-footer">
+        <div class="footer-cta">
+            <div class="container footer-flex-container">
+                <div class="footer-logo-container">
+                    <img src="../../logo/VenRAAG_logo_blue.png" alt="VenRAAG Logo" class="final-cta-logo">
+                </div>
+                <div class="final-cta-content">
+                    <h2>Ready to see Enclaraa in action?</h2>
+                    <div class="final-cta-buttons">
+                        <button onclick="location.href='../../Demo'">Request a Demo</button>
+                        <button onclick="location.href='#ComingSoon'">Explore Enclaraa (Coming Soon!)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-separator"></div>
+        
+        <div class="footer-info">
+            <div class="container footer-container">
+                <div class="footer-links">
+                    <a href="../../About" class="nav-link">About</a>
+                    <a href="../../Privacy" class="nav-link">Privacy Policy</a>
+                    <a href="../../Terms" class="nav-link">Terms of Use</a>
+                </div>
+                <p>2025 LegalTech AI - All rights reserved.</p>
+                <div class="social-media">
+                    <a href="https://x.com/VenRAAG_X" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/venraag/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/venraag/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+</body>
+</html>

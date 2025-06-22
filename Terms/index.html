@@ -15,7 +15,7 @@
 <body>
   <!-- Page Transition Overlay -->
   <div class="page-transition">
-    <a href="/">
+    <a href="../index.html">
       <img src="../logo/VenRAAG_logo.JPG" alt="VenRAAG Logo" class="transition-logo">
     </a>
   </div>
@@ -30,11 +30,11 @@
     <div class="container header-container">
       <div class="logo-container">
         <div class="logo">
-          <a href="../Home">
+          <a href="../index.html">
             <img src="../logo/VenRAAG_logo.JPG" alt="VenRAAG Logo" class="logo-img">
           </a>
         </div>
-        <a href="../Home">
+        <a href="../index.html">
           <h1 class="header-title">VenRAAG</h1>
           </a>
       </div>
@@ -42,8 +42,18 @@
         <ul class="nav-list">
             <li><a href="../Home" class="nav-link"><span>Home</span></a></li>
             <li><a href="../About" class="nav-link"><span>About</span></a></li>
-            <li><a href="../Solutions" class="nav-link"><span>Solutions</span></a></li>
-            <li><a href="../Industries" class="nav-link"><span>Industries</span></a></li>
+            <li class="dropdown">
+                <a href="#" class="nav-link"><span>Features</span></a>
+                <div class="dropdown-content">
+                    <a href="../Features/legal-intelligence">Legal Intelligence</a>
+                    <a href="../Features/document-drafting">Document Drafting</a>
+                    <a href="../Features/batch-review">Batch Review</a>
+                    <a href="../Features/workflow-hub">Workflow Hub</a>
+                    <a href="../Features/knowledge-vault">Knowledge Vault</a>
+                    <a href="../Features/security">Enterprise Security</a>
+                </div>
+            </li>
+            <li><a href="../Solutions" class="nav-link"><span>Legal Solutions</span></a></li>
         </ul>
         <ul class="nav-list-cta">
           <li><a href="../TalkToExpert" class="nav-link cta"><span>Talk to an Expert</span></a></li>
@@ -59,8 +69,14 @@
         <ul class="nav-list">
             <li><a href="../Home" class="nav-link">Home</a></li>
             <li><a href="../About" class="nav-link">About</a></li>
-            <li><a href="../Solutions" class="nav-link">Solutions</a></li>
-            <li><a href="../Industries" class="nav-link">Industries</a></li>
+            <li><a href="#" class="nav-link">Features</a></li>
+            <li><a href="../Features/legal-intelligence" class="nav-link sub-link">Legal Intelligence</a></li>
+            <li><a href="../Features/document-drafting" class="nav-link sub-link">Document Drafting</a></li>
+            <li><a href="../Features/batch-review" class="nav-link sub-link">Batch Review</a></li>
+            <li><a href="../Features/workflow-hub" class="nav-link sub-link">Workflow Hub</a></li>
+            <li><a href="../Features/knowledge-vault" class="nav-link sub-link">Knowledge Vault</a></li>
+            <li><a href="../Features/security" class="nav-link sub-link">Enterprise Security</a></li>
+            <li><a href="../Solutions" class="nav-link">Legal Solutions</a></li>
             <li><a href="../TalkToExpert" class="nav-link-cta">Talk to an Expert</a></li>
             <li><a href="../Demo" class="nav-link-cta">Request Demo</a></li>
         </ul>
@@ -125,35 +141,42 @@
     </section>
   </main>
 
-  <section class="final-cta">
-    <div class="container">
-      <img src="../logo/VenRAAG_logo_blue.png" alt="VenRAAG Logo" class="final-cta-logo">
-      <div class="final-cta-content">
-      <h2>Ready to unlock the power of Enterprise AI?</h2>
-      <div class="final-cta-buttons">
-        <button onclick="location.href='../TalkToExpert'">Request a Demo</button>
+  <footer class="merged-footer">
+    <div class="footer-cta">
+      <div class="container footer-flex-container">
+        <div class="footer-logo-container">
+          <img src="../logo/VenRAAG_logo_blue.png" alt="VenRAAG Logo" class="final-cta-logo">
+        </div>
+        <div class="final-cta-content">
+          <h2>Ready to unlock the power of Enterprise AI?</h2>
+          <div class="final-cta-buttons">
+            <button onclick="location.href='../TalkToExpert'">Request a Demo</button>
+          </div>
+        </div>
       </div>
     </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container footer-container">
-      <div class="footer-links">
-        <a href="../About" class="nav-link">About</a>
-        <a href="../Privacy" class="nav-link">Privacy Policy</a>
-        <a href="../Terms" class="nav-link">Terms of Use</a>
-      </div>
-      <p>2025 VenRAAG - All rights reserved.</p>
-      <div class="social-media">
-        <a href="https://x.com/VenRAAG_X" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-x-twitter"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/venraag/" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://www.instagram.com/venraag/" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-instagram"></i>
+    
+    <div class="footer-separator"></div>
+    
+    <div class="footer-info">
+      <div class="container footer-container">
+        <div class="footer-links">
+          <a href="../About" class="nav-link">About</a>
+          <a href="../Privacy" class="nav-link">Privacy Policy</a>
+          <a href="../Terms" class="nav-link">Terms of Use</a>
+        </div>
+        <p>2025 VenRAAG - All rights reserved.</p>
+        <div class="social-media">
+          <a href="https://x.com/VenRAAG_X" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/venraag/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://www.instagram.com/venraag/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
       </div>
     </div>
   </footer>

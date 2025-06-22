@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       
       // Validate Business Email
-      // Validate Business Email
       const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
       const forbiddenDomains = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'live.com'];
          
@@ -142,6 +141,17 @@ function toggleMenu() {
   
   // Optional: Toggle hamburger icon animation
   document.querySelector('.menu-icon').classList.toggle('open');
+  
+  // Initialize Features dropdown state when opening the menu
+  if (mobileNav.classList.contains('active')) {
+    // When opening the menu, ensure all dropdowns are closed
+    const dropdowns = document.querySelectorAll('.features-dropdown');
+    dropdowns.forEach(dropdown => {
+      if (!dropdown.classList.contains('active')) {
+        dropdown.style.display = 'none';
+      }
+    });
+  }
 }
 
 // Close mobile menu when clicking outside
@@ -159,12 +169,44 @@ document.addEventListener('click', function(event) {
   }
 });
 
-// Close mobile menu on nav link click
-document.querySelectorAll("#mobileNav .nav-link").forEach(link => {
+// Close mobile menu on nav link click (except dropdown toggles)
+document.querySelectorAll("#mobileNav .nav-link:not(.dropdown-toggle)").forEach(link => {
   link.addEventListener("click", () => {
     document.getElementById("mobileNav").style.display = "none";
   });
 });
+
+// Toggle Features dropdown in mobile menu
+function toggleFeaturesDropdown(event) {
+  // Only allow dropdown functionality in mobile menu
+  if (!isMobileMenuOpen()) {
+    return;
+  }
+  
+  event.preventDefault();
+  event.stopPropagation(); // Prevent event bubbling
+  
+  const dropdownToggle = event.currentTarget;
+  const featuresDropdown = dropdownToggle.nextElementSibling;
+  
+  // Toggle active class on dropdown toggle
+  dropdownToggle.classList.toggle('active');
+  
+  // Toggle the dropdown visibility
+  if (featuresDropdown.classList.contains('active')) {
+    featuresDropdown.classList.remove('active');
+    featuresDropdown.style.display = 'none';
+  } else {
+    featuresDropdown.classList.add('active');
+    featuresDropdown.style.display = 'block';
+  }
+}
+
+// Helper function to check if mobile menu is open
+function isMobileMenuOpen() {
+  const mobileNav = document.getElementById('mobileNav');
+  return mobileNav && (mobileNav.classList.contains('active') || mobileNav.style.display === 'block');
+}
 
 // Tab switching logic
 const tabs = document.querySelectorAll('.tab-list .tab');
