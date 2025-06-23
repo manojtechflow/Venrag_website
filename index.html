@@ -13,6 +13,7 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./feature-styles.css">
+  <link rel="stylesheet" href="./cookie-consent.css">
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="./logo/VenRAAG_logo_icon.ico">
 </head>
@@ -73,24 +74,24 @@
         <div class="container">
             <nav>
                 <ul class="nav-list">
-                    <li><a href="../Home" class="nav-link">Home</a></li>
-                    <li><a href="../About" class="nav-link">About</a></li>
+                    <li><a href="./Home" class="nav-link">Home</a></li>
+                    <li><a href="./About" class="nav-link">About</a></li>
                     <li>
-                        <span class="nav-link dropdown-toggle" onclick="toggleFeaturesDropdown(event)">
+                        <div class="nav-link dropdown-toggle" onclick="toggleFeaturesDropdown(event)">
                             Features <i class="fas fa-chevron-down"></i>
-                        </span>
+                        </div>
                         <div class="features-dropdown">
-                            <a href="../Features/legal-intelligence" class="nav-link sub-link">Legal Intelligence</a>
-                            <a href="../Features/document-drafting" class="nav-link sub-link">Document Drafting</a>
-                            <a href="../Features/batch-review" class="nav-link sub-link active">Batch Review</a>
-                            <a href="../Features/workflow-hub" class="nav-link sub-link">Workflow Hub</a>
-                            <a href="../Features/knowledge-vault" class="nav-link sub-link">Knowledge Vault</a>
-                            <a href="../Features/security" class="nav-link sub-link">Enterprise Security</a>
+                            <a href="./Features/legal-intelligence" class="nav-link sub-link">Legal Intelligence</a>
+                            <a href="./Features/document-drafting" class="nav-link sub-link">Document Drafting</a>
+                            <a href="./Features/batch-review" class="nav-link sub-link">Batch Review</a>
+                            <a href="./Features/workflow-hub" class="nav-link sub-link">Workflow Hub</a>
+                            <a href="./Features/knowledge-vault" class="nav-link sub-link">Knowledge Vault</a>
+                            <a href="./Features/security" class="nav-link sub-link">Enterprise Security</a>
                         </div>
                     </li>
-                    <li><a href="../Solutions" class="nav-link">Legal Solutions</a></li>
-                    <li><a href="../TalkToExpert" class="nav-link-cta">Talk to an Expert</a></li>
-                    <li><a href="../Demo" class="nav-link-cta">Request Demo</a></li>
+                    <li><a href="./Solutions" class="nav-link">Legal Solutions</a></li>
+                    <li><a href="./TalkToExpert" class="nav-link-cta">Talk to an Expert</a></li>
+                    <li><a href="./Demo" class="nav-link-cta">Request Demo</a></li>
                 </ul>
             </nav>
         </div>
@@ -136,7 +137,7 @@
             </div>
             
             <!-- Legal Intelligence Feature Box (Image Left) -->
-            <div class="feature-box">
+            <div class="feature-box image-left">
               <div class="feature-image">
                 <img src="./logo/features/legal-intelligence.png" alt="Legal Assistant Feature">
               </div>
@@ -162,7 +163,7 @@
             </div>
             
             <!-- Batch Review Feature Box (Image Left) -->
-            <div class="feature-box">
+            <div class="feature-box image-left">
               <div class="feature-image">
                 <img src="./logo/features/Batch-Review.png" alt="Batch Review Feature">
               </div>
@@ -188,7 +189,7 @@
             </div>
             
             <!-- Knowledge Vault Feature Box (Image Left) -->
-            <div class="feature-box">
+            <div class="feature-box image-left">
               <div class="feature-image">
                 <img src="./logo/features/Knowledge-Vault.png" alt="Knowledge Vault Feature">
               </div>
@@ -305,5 +306,101 @@
   </footer>
   
   <script src="./script.js" defer></script>
+  <!-- Cookie Consent Banner -->
+  <div class="cookie-consent" id="cookieConsent">
+    <div class="cookie-consent-container">
+      <div class="cookie-consent-content">
+        <div class="cookie-consent-header">
+          <i class="fas fa-cookie-bite"></i>
+          <h3>Cookie Consent</h3>
+        </div>
+        <div class="cookie-consent-text">
+          <p>We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By clicking "Accept All", you consent to our use of cookies. To learn more about how we use cookies, please see our <a href="./Privacy">Privacy Policy</a>. You can manage your preferences or decline non-essential cookies at any time.</p>
+        </div>
+      </div>
+      <div class="cookie-consent-buttons">
+        <button id="acceptCookies" class="cookie-btn cookie-btn-accept">
+          <i class="fas fa-check"></i> Accept All
+        </button>
+        <button id="acceptEssentialCookies" class="cookie-btn cookie-btn-essentials">
+          <i class="fas fa-shield-alt"></i> Essentials Only
+        </button>
+        <button id="declineCookies" class="cookie-btn cookie-btn-decline">
+          <i class="fas fa-times"></i> Decline
+        </button>
+        <button id="cookieSettings" class="cookie-btn cookie-btn-decline">
+          <i class="fas fa-cog"></i> Customize
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cookie Settings Modal -->
+  <div class="cookie-settings-modal" id="cookieSettingsModal">
+    <div class="cookie-settings-content">
+      <div class="cookie-settings-header">
+        <h3>Cookie Settings</h3>
+        <button id="closeSettings" class="cookie-settings-close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <div class="cookie-settings-section">
+        <p>Manage your cookie preferences below. Essential cookies are necessary for the website to function properly and cannot be disabled.</p>
+        
+        <div class="cookie-toggle">
+          <div>
+            <div class="cookie-toggle-label">Essential Cookies</div>
+            <div class="cookie-toggle-description">Required for the website to function properly.</div>
+          </div>
+          <label class="cookie-toggle-switch">
+            <input type="checkbox" id="cookie-toggle-essential" checked disabled>
+            <span class="cookie-toggle-slider"></span>
+          </label>
+        </div>
+        
+        <div class="cookie-toggle">
+          <div>
+            <div class="cookie-toggle-label">Analytics Cookies</div>
+            <div class="cookie-toggle-description">Help us understand how visitors interact with our website.</div>
+          </div>
+          <label class="cookie-toggle-switch">
+            <input type="checkbox" id="cookie-toggle-analytics">
+            <span class="cookie-toggle-slider"></span>
+          </label>
+        </div>
+        
+        <div class="cookie-toggle">
+          <div>
+            <div class="cookie-toggle-label">Marketing Cookies</div>
+            <div class="cookie-toggle-description">Used to deliver relevant ads and measure their effectiveness.</div>
+          </div>
+          <label class="cookie-toggle-switch">
+            <input type="checkbox" id="cookie-toggle-marketing">
+            <span class="cookie-toggle-slider"></span>
+          </label>
+        </div>
+        
+        <div class="cookie-toggle">
+          <div>
+            <div class="cookie-toggle-label">Preference Cookies</div>
+            <div class="cookie-toggle-description">Remember your settings and improve your experience.</div>
+          </div>
+          <label class="cookie-toggle-switch">
+            <input type="checkbox" id="cookie-toggle-preferences">
+            <span class="cookie-toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+      
+      <div class="cookie-settings-footer">
+        <button id="saveSettings" class="cookie-settings-save">Save Settings</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./script.js"></script>
+  <script src="./cookie-consent.js"></script>
 </body>
 </html>
