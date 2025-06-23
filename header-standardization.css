@@ -1,0 +1,109 @@
+/* ==========================================================================
+   Header Standardization - Ensures consistent header styling across all pages
+   ========================================================================== */
+
+/* Desktop header standardization */
+@media (min-width: 769px) {
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 0.5rem;
+  }
+  
+  .logo-container {
+    flex: 0 0 auto;
+    margin-right: 10rem;
+    transform: translateX(-10px);
+    margin-top: 20px;
+    margin-left: -80px;
+  }
+  
+  .desktop-nav {
+    display: flex !important;
+    flex: 1;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .desktop-nav .nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .logo-img {
+    height: 30px;
+    margin-top: -5px;
+  }
+  
+  .header-title {
+    font-size: 1.4rem;
+    margin-left: 0.5rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+  
+  .nav-list-cta {
+    position: relative;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Mobile header standardization */
+@media (max-width: 768px) {
+  header {
+    height: 70px;
+    padding: 0 1rem;
+  }
+  
+  .header-container {
+    padding: 0;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+  }
+  
+  .logo-container {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    max-width: calc(100% - 60px);
+    flex-shrink: 0;
+    margin-left: -10px;
+  }
+  
+  .menu-icon {
+    position: relative;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    z-index: 1001;
+    padding: 10px;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-right: -5px;
+    margin-top: -5px;
+  }
+  
+  .logo-img {
+    height: 30px;
+  }
+  
+  .header-title {
+    font-size: 1.2rem;
+    margin-left: 0.4rem;
+    overflow: visible;
+    text-overflow: unset;
+  }
+}
