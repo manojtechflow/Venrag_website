@@ -187,9 +187,8 @@
     }
     
     .logo-container {
-      margin-left: -100px;
+      margin-left: -150px;
       margin-top: 5px;
-      font-size: small;
     }
     
     .menu-icon {
@@ -207,10 +206,10 @@
   .logo-img {
     height: 30px;
     width: auto;
-    margin-top: 5px;
+    margin-top: -5px;
   }
   .header-title {
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-left: 0.5rem;
     line-height: 30px;
     top: 10px;
@@ -2567,6 +2566,7 @@ body {
       transition: transform 0.3s ease;
     }
     
+
   
     /* 3) Hero Section */
     .hero-content h2 {
