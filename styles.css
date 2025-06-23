@@ -301,6 +301,8 @@
       padding: 10px;
       cursor: pointer;
       flex-shrink: 0;
+      margin-right: -5px; /* Move menu icon slightly right */
+      margin-top: -5px; /* Move menu icon slightly up */
     }
   }
   
@@ -1564,6 +1566,7 @@
   .main-feature-box {
     flex-direction: column !important;
     margin-bottom: 3rem;
+    text-align: center;
   }
   
   .main-feature-image,
@@ -1571,8 +1574,22 @@
     flex: 1 1 100%;
   }
   
+  .main-feature-image {
+    margin-top: 1.5rem;
+    order: -1; /* Move image to top */
+  }
+  
+  .main-feature-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
   .main-feature-title {
     font-size: 1.8rem;
+  }
+  
+  .main-feature-content {
+    text-align: center;
   }
 }
 
