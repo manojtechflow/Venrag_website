@@ -1556,40 +1556,72 @@
 
 @media (max-width: 768px) {
   .main-feature-section {
-    padding: 3rem 0;
+    padding: 2rem 0;
   }
   
   .main-feature-heading h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
   }
   
   .main-feature-box {
     flex-direction: column !important;
     margin-bottom: 3rem;
     text-align: center;
+    padding: 0 1rem;
+  }
+  
+  .main-feature-box.image-left,
+  .main-feature-box.image-right {
+    flex-direction: column !important; /* Force column layout regardless of original direction */
   }
   
   .main-feature-image,
   .main-feature-content {
     flex: 1 1 100%;
+    width: 100%;
+    max-width: 100%;
   }
   
   .main-feature-image {
-    margin-top: 1.5rem;
-    order: -1; /* Move image to top */
+    margin: 0 auto 1.5rem;
+    order: -1; /* Move image to top for all feature boxes */
+    text-align: center;
   }
   
   .main-feature-image img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
+    margin: 0 auto;
+    display: block;
   }
   
   .main-feature-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .main-feature-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .main-feature-summary {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 auto 1.25rem;
+    max-width: 100%;
   }
   
   .main-feature-content {
     text-align: center;
+    padding: 0;
+  }
+  
+  .main-feature-explore {
+    margin-top: 0.5rem;
+    display: inline-block;
   }
 }
 
