@@ -61,26 +61,34 @@
         </ul>
       </nav>
     
-      <!-- New Mobile Navigation -->
       <div class="menu-icon" onclick="toggleMenu()">
-          <i class="fas fa-bars"></i> <!-- Hamburger Icon -->
+        <i class="fas fa-bars"></i>
       </div>
-      <nav class="mobile-nav" id="mobileNav">
-        <ul class="nav-list">
-            <li><a href="../Home" class="nav-link">Home</a></li>
-            <li><a href="../About" class="nav-link">About</a></li>
-            <li><a href="#" class="nav-link">Features</a></li>
-            <li><a href="../Features/legal-intelligence" class="nav-link sub-link">Legal Intelligence</a></li>
-            <li><a href="../Features/document-drafting" class="nav-link sub-link">Document Drafting</a></li>
-            <li><a href="../Features/batch-review" class="nav-link sub-link">Batch Review</a></li>
-            <li><a href="../Features/workflow-hub" class="nav-link sub-link">Workflow Hub</a></li>
-            <li><a href="../Features/knowledge-vault" class="nav-link sub-link">Knowledge Vault</a></li>
-            <li><a href="../Features/security" class="nav-link sub-link">Enterprise Security</a></li>
-            <li><a href="../Solutions" class="nav-link">Legal Solutions</a></li>
-            <li><a href="../TalkToExpert" class="nav-link-cta">Talk to an Expert</a></li>
-            <li><a href="../Demo" class="nav-link-cta">Request Demo</a></li>
-        </ul>
-    </nav>
+      <div class="mobile-nav" id="mobileNav">
+        <div class="container">
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="../Home" class="nav-link">Home</a></li>
+                    <li><a href="../About" class="nav-link">About</a></li>
+                    <li>
+                        <span class="nav-link dropdown-toggle" onclick="toggleFeaturesDropdown(event)">
+                            Features <i class="fas fa-chevron-down"></i>
+                        </span>
+                        <div class="features-dropdown">
+                            <a href="../Features/legal-intelligence" class="nav-link sub-link">Legal Intelligence</a>
+                            <a href="../Features/document-drafting" class="nav-link sub-link">Document Drafting</a>
+                            <a href="../Features/batch-review" class="nav-link sub-link active">Batch Review</a>
+                            <a href="../Features/workflow-hub" class="nav-link sub-link">Workflow Hub</a>
+                            <a href="../Features/knowledge-vault" class="nav-link sub-link">Knowledge Vault</a>
+                            <a href="../Features/security" class="nav-link sub-link">Enterprise Security</a>
+                        </div>
+                    </li>
+                    <li><a href="../Solutions" class="nav-link">Legal Solutions</a></li>
+                    <li><a href="../TalkToExpert" class="nav-link-cta">Talk to an Expert</a></li>
+                    <li><a href="../Demo" class="nav-link-cta">Request Demo</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
   </header>
 
