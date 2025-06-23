@@ -121,6 +121,26 @@ class CookieConsentManager {
   
   // Set up event listeners
   setupEventListeners() {
+    // Read more/less functionality for essential cookies
+    const readMoreBtn = document.querySelector('.cookie-read-more');
+    const readLessBtn = document.querySelector('.cookie-read-less');
+    const shortDescription = document.querySelector('.cookie-description-short');
+    const fullDescription = document.querySelector('.cookie-description-full');
+    
+    if (readMoreBtn && readLessBtn && shortDescription && fullDescription) {
+      readMoreBtn.addEventListener('click', () => {
+        shortDescription.style.display = 'none';
+        fullDescription.style.display = 'block';
+        readMoreBtn.style.display = 'none';
+      });
+      
+      readLessBtn.addEventListener('click', () => {
+        shortDescription.style.display = 'block';
+        fullDescription.style.display = 'none';
+        readMoreBtn.style.display = 'inline-block';
+      });
+    }
+    
     // Accept all cookies
     const acceptBtn = document.getElementById('acceptCookies');
     if (acceptBtn) {

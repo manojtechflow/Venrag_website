@@ -195,12 +195,17 @@
 
 .cookie-toggle {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 0.75rem 1rem;
   background-color: #f8f9fa;
   border-radius: 8px;
   margin-bottom: 0.75rem;
+}
+
+/* Slimmer essential cookies toggle */
+.essential-toggle {
+  padding: 0.5rem 0.75rem;
 }
 
 .cookie-toggle-label {
@@ -211,6 +216,38 @@
   font-size: 0.85rem;
   color: #666;
   margin-top: 0.25rem;
+}
+
+/* Read more/less functionality */
+.cookie-description-full {
+  display: none;
+  padding-top: 0.5rem;
+}
+
+.cookie-description-full p {
+  margin: 0 0 0.5rem 0;
+}
+
+.cookie-read-more, .cookie-read-less {
+  font-size: 0.8rem;
+  color: var(--accent-color);
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.cookie-read-more:hover, .cookie-read-less:hover {
+  text-decoration: underline;
+}
+
+.essential-toggle .cookie-toggle-label {
+  font-size: 0.95rem;
+}
+
+.essential-toggle .cookie-toggle-description {
+  font-size: 0.8rem;
+  line-height: 1.3;
 }
 
 .cookie-toggle-switch {
