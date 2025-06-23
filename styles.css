@@ -182,13 +182,15 @@
   @media (max-width: 768px) {
     .header-container {
       padding: 0 15px;
-      justify-content: center;
+      justify-content: space-between;
       position: relative;
     }
     
     .logo-container {
-      margin-left: -150px;
+      margin-left: 0;
       margin-top: 5px;
+      display: flex;
+      align-items: center;
     }
     
     .menu-icon {
@@ -196,6 +198,9 @@
       right: 15px;
       top: 50%;
       transform: translateY(-50%);
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      z-index: 10;
     }
   }
   
@@ -208,12 +213,28 @@
     width: auto;
     margin-top: -5px;
   }
+  
   .header-title {
     font-size: 1.5rem;
     margin-left: 0.5rem;
     line-height: 30px;
     top: 10px;
     white-space: nowrap;
+  }
+  
+  @media (max-width: 768px) {
+    .logo-img {
+      height: 25px;
+      width: auto;
+      margin-top: 0;
+    }
+    
+    .header-title {
+      font-size: 1.2rem;
+      margin-left: 0.3rem;
+      line-height: normal;
+      white-space: nowrap;
+    }
   }
   
   
@@ -227,7 +248,7 @@
     display: none;
     width: 100%;
     position: fixed;
-    top: 100px; /* Increased to position below header and company title */
+    top: 70px; /* Adjusted to position properly below header */
     left: 0;
     right: 0;
     background-color: var(--background-light);
@@ -236,6 +257,11 @@
     padding: 0.5rem 1rem; 
     box-sizing: border-box;
     overflow-y: auto;
+    height: calc(100vh - 70px);
+  }
+  
+  .mobile-nav.active {
+    display: block;
   }
   
   .mobile-nav .nav-list {
@@ -282,6 +308,12 @@
   
   .mobile-nav .features-dropdown.active {
     display: block;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
   
   .mobile-nav .features-dropdown a {

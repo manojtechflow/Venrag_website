@@ -139,7 +139,7 @@ function toggleMenu() {
   const mobileNav = document.getElementById('mobileNav');
   mobileNav.classList.toggle('active');
   
-  // Optional: Toggle hamburger icon animation
+  // Toggle hamburger icon animation
   document.querySelector('.menu-icon').classList.toggle('open');
   
   // Initialize Features dropdown state when opening the menu
@@ -147,10 +147,23 @@ function toggleMenu() {
     // When opening the menu, ensure all dropdowns are closed
     const dropdowns = document.querySelectorAll('.features-dropdown');
     dropdowns.forEach(dropdown => {
-      if (!dropdown.classList.contains('active')) {
-        dropdown.style.display = 'none';
-      }
+      dropdown.classList.remove('active');
+      dropdown.style.display = 'none';
     });
+    
+    // Reset dropdown toggle icons
+    const toggles = document.querySelectorAll('.dropdown-toggle i');
+    toggles.forEach(toggle => {
+      toggle.className = 'fas fa-chevron-down';
+    });
+  } else {
+    // When closing the menu, reset all states
+    document.body.style.overflow = '';
+  }
+  
+  // Prevent body scrolling when menu is open
+  if (mobileNav.classList.contains('active')) {
+    document.body.style.overflow = 'hidden';
   }
 }
 
