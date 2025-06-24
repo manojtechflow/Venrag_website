@@ -1569,7 +1569,7 @@
     flex-direction: column !important;
     margin-bottom: 3rem;
     text-align: center;
-    padding: 0 1rem;
+    padding: 1.5rem 0;
   }
   
   .main-feature-box.image-left,
@@ -1616,7 +1616,7 @@
   
   .main-feature-content {
     text-align: center;
-    padding: 0;
+    padding: 0 0.5rem;
   }
   
   .main-feature-explore {
