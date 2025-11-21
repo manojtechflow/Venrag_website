@@ -22,10 +22,11 @@
 
   <!-- Announcement bar -->
   <div class="announcement-bar">
-    Introducing Enclaraa: your on-premises domain expert, engineered for peak performance on minimal compute. Coming soon!
+
+
   </div>
 
-  <!-- Header -->
+ <!-- Header -->
   <header>
     <div class="container header-container">
       <div class="logo-container">
@@ -35,7 +36,7 @@
           </a>
         </div>
         <a href="../index.html">
-          <h1 class="header-title">VenRAAG</h1>
+          <h1 class="header-title">Enclaraa | VenRAAG</h1>
           </a>
       </div>
       <nav class="desktop-nav">
@@ -53,10 +54,10 @@
                     <a href="../Features/security">Enterprise Security</a>
                 </div>
             </li>
-            <li><a href="../Solutions" class="nav-link"><span>Legal Solutions</span></a></li>
+           
         </ul>
         <ul class="nav-list-cta">
-          <li><a href="../TalkToExpert" class="nav-link cta"><span>Talk to an Expert</span></a></li>
+          
           <li><a href="../Demo" class="nav-link cta"><span>Request Demo</span></a></li>
         </ul>
       </nav>
@@ -83,7 +84,7 @@
                             <a href="../Features/security" class="nav-link sub-link">Enterprise Security</a>
                         </div>
                     </li>
-                    <li><a href="../Solutions" class="nav-link">Legal Solutions</a></li>
+                    
                     <li><a href="../TalkToExpert" class="nav-link-cta">Talk to an Expert</a></li>
                     <li><a href="../Demo" class="nav-link-cta">Request Demo</a></li>
                 </ul>
@@ -93,65 +94,68 @@
   </header>
   
   <!-- Main Content -->
-  <main>
-    <section id="waitinglist" class="page active">
-      <div class="container">
-        <h2>Join the Enclaraa Waiting List</h2>
-        <div class="contact-form-container">
-            <form id="waitingListForm" action="https://formspree.io/f/your_form_id" method="POST">
-            <div class="form-row">
-                <div class="form-group">
-                <label>First Name *</label>
-                <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
-                </div>
-                <div class="form-group">
-                <label>Last Name *</label>
-                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
-                </div>
-            </div>
-            <div class="form-group">
-                <label>Business Email *</label>
-                <input type="email" id="businessEmail" name="businessEmail" placeholder="Your Business Email" required>
-            </div>
-            <div class="form-group">
-                <label>Company/Organization *</label>
-                <input type="text" id="company" name="company" placeholder="Your Company or Organization" required>
-            </div>
-            <div class="form-group">
-                <label>Job Title *</label>
-                <input type="text" id="jobTitle" name="jobTitle" placeholder="Your Job Title" required>
-            </div>
-            <div class="form-group">
-                <label>Industry *</label>
-                <select id="industry" name="industry" required>
-                    <option value="" disabled selected>Select your industry</option>
-                    <option value="legal">Legal Services</option>
-                    <option value="corporate">Corporate Legal Department</option>
-                    <option value="government">Government</option>
-                    <option value="education">Education</option>
-                    <option value="finance">Finance</option>
-                    <option value="healthcare">Healthcare</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>How would you like to use Enclaraa? *</label>
-                <textarea id="useCase" name="useCase" placeholder="Describe how you plan to use Enclaraa in your organization" required></textarea>
-            </div>
-            <p class="required-fields-note">* All fields are required</p>
-            <div class="form-group checkbox-group">
-                <input type="checkbox" id="emailConsent" name="emailConsent">
-                <label for="emailConsent">I agree to receive product updates and early access information from VenRAAG</label>
-            </div>
-            <div class="form-group checkbox-group">
-                <input type="checkbox" id="termsConsent" name="termsConsent" required>
-                <label for="termsConsent">I agree to VenRAAG's <a href="../Terms" target="_blank" rel="noopener noreferrer">Terms of Use</a> and <a href="../Privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> *</label>
-            </div>
-            <button type="submit" class="request-demo-btn">Join Waiting List</button>
-            </form>
-        </div>
+  <main class="split-layout">
+    <div class="left-content">
+      <div class="content-wrapper">
+        <h1 style="text-align: center;">Join the Future</h1>
+        <p>Be among the first to experience Enclaraa, the next-generation legal AI platform designed for professional excellence.</p>
       </div>
-    </section>
+    </div>
+    <div class="right-form">
+      <div class="form-container">
+        <form id="waitingListForm" action="https://formspree.io/f/xqapeyzp" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name *</label>
+              <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+            </div>
+            <div class="form-group">
+              <label>Last Name *</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Business Email *</label>
+            <input type="email" id="businessEmail" name="businessEmail" placeholder="Your Business Email" required>
+          </div>
+          <div class="form-group">
+            <label>Company/Organization *</label>
+            <input type="text" id="company" name="company" placeholder="Your Company or Organization" required>
+          </div>
+          <div class="form-group">
+            <label>Job Title *</label>
+            <input type="text" id="jobTitle" name="jobTitle" placeholder="Your Job Title" required>
+          </div>
+          <div class="form-group">
+            <label>Industry *</label>
+            <select id="industry" name="industry" required>
+              <option value="" disabled selected>Select your industry</option>
+              <option value="legal">Legal Services</option>
+              <option value="corporate">Corporate Legal Department</option>
+              <option value="government">Government</option>
+              <option value="education">Education</option>
+              <option value="finance">Finance</option>
+              <option value="healthcare">Healthcare</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>How would you like to use Enclaraa? *</label>
+            <textarea id="useCase" name="useCase" placeholder="Describe how you plan to use Enclaraa in your organization" required></textarea>
+          </div>
+          <p class="required-fields-note">* All fields are required</p>
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="emailConsent" name="emailConsent">
+            <label for="emailConsent">I agree to receive product updates and early access information from VenRAAG</label>
+          </div>
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="termsConsent" name="termsConsent" required>
+            <label for="termsConsent">I agree to VenRAAG's <a href="../Terms" target="_blank" rel="noopener noreferrer">Terms of Use</a> and <a href="../Privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> *</label>
+          </div>
+          <button type="submit" class="request-demo-btn">LETS JOIN</button>
+        </form>
+      </div>
+    </div>
   </main>
   
 
@@ -163,7 +167,7 @@
         </div>
         <div class="final-cta-content">
           <h2>Thank you for joining the Enclaraa waiting list!</h2>
-          <p>You'll be among the first to know when Enclaraa is ready for early access. We'll keep you updated on our progress.</p>
+          <p style="color: white;">You'll be among the first to know when Enclaraa is ready for early access. We'll keep you updated on our progress.</p>
         </div>
       </div>
     </div>

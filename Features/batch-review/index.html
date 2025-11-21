@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous">
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../../styles.css">
-    <link rel="stylesheet" href="../../feature-styles.css">
+    <link rel="stylesheet" href="../../benefits-showcase.css">
+    <link rel="stylesheet" href="../../step-override.css">
+    <link rel="stylesheet" href="../../arrow-fix.css">
+    <link rel="stylesheet" href="../../heading-fix.css">
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../../logo/VenRAAG_logo_icon.ico">
 </head>
@@ -21,11 +25,12 @@
         <a href="../../index.html">
             <img src="../../logo/VenRAAG_logo.JPG" alt="VenRAAG Logo" class="transition-logo">
         </a>
+
     </div>
 
     <!-- Announcement bar -->
     <div class="announcement-bar">
-        Introducing Enclaraa: your on-premises legal expert, engineered for case analysis and legal document intelligence. Coming soon!
+
     </div>
     <header>
         <div class="container header-container">
@@ -54,7 +59,7 @@
                             <a href="../security">Enterprise Security</a>
                         </div>
                     </li>
-                    <li><a href="../../Solutions" class="nav-link"><span>Legal Solutions</span></a></li>
+                   
 
                 </ul>
             <ul class="nav-list-cta">
@@ -84,7 +89,7 @@
                                         <a href="../security" class="nav-link sub-link">Enterprise Security</a>
                                     </div>
                                 </li>
-                                <li><a href="../../Solutions" class="nav-link">Legal Solutions</a></li>
+                                
                                 <li><a href="../../TalkToExpert" class="nav-link-cta">Talk to an Expert</a></li>
                                 <li><a href="../../Demo" class="nav-link-cta">Request Demo</a></li>
                             </ul>
@@ -96,78 +101,302 @@
 
 
     <main>
-        <!-- Feature Hero Section -->
-        <section class="feature-hero">
+        <!-- venraag-style Hero -->
+        <section class="venraag-hero">
             <div class="container">
-                <div class="feature-hero-content">
-                    <h1>Batch Review</h1>
-                    <p class="feature-subtitle">Review 50+ Documents in One Sweep</p>
-                    <p class="feature-description">
-                        Upload contracts in bulk to get instant redlines, risk flags, and margin notes. Extract key entities, summarize critical terms, and track resolution status—automatically.
-                    </p>
+                <h1>Batch Review</h1>
+                <p>Upload contracts in bulk to get instant redlines, risk flags, and margin notes. Extract key entities, summarize critical terms, and track resolution status—automatically.</p>
+            </div>
+        </section>
+
+        <!-- venraag-style Solutions -->
+        <section class="venraag-solutions">
+            <div class="container">
+                <h2>Solutions</h2>
+                
+                <div class="solutions-grid">
+                    <div class="solution-card">
+                        <div class="solution-header">
+                            <h3 class="solution-title">Bulk Document Processing</h3>
+                            <p class="solution-subtitle">Upload and analyze multiple documents simultaneously</p>
+                        </div>
+                        <p class="solution-description">
+                            Process dozens of contracts, agreements, and legal documents at once. Our AI analyzes each document for key terms, risks, and compliance issues in parallel.
+                        </p>
+                        <ul class="solution-features">
+                            <li>Upload up to 100 documents at once</li>
+                            <li>Support for PDF, Word, and scanned documents</li>
+                            <li>Parallel processing for faster results</li>
+                            <li>Secure document handling and storage</li>
+                        </ul>
+                    </div>
+
+                    <div class="solution-card">
+                        <div class="solution-header">
+                            <h3 class="solution-title">AI-Powered Analysis</h3>
+                            <p class="solution-subtitle">Intelligent document review and risk detection</p>
+                        </div>
+                        <p class="solution-description">
+                            Advanced AI identifies key clauses, potential risks, and important terms across all documents. Get instant redlines and margin notes highlighting critical information.
+                        </p>
+                        <ul class="solution-features">
+                            <li>Automated risk flagging and assessment</li>
+                            <li>Key clause identification and extraction</li>
+                            <li>Intelligent redlining and annotations</li>
+                            <li>Consistency checking across documents</li>
+                        </ul>
+                    </div>
+
+                    <div class="solution-card">
+                        <div class="solution-header">
+                            <h3 class="solution-title">Comprehensive Reporting</h3>
+                            <p class="solution-subtitle">Detailed insights and actionable recommendations</p>
+                        </div>
+                        <p class="solution-description">
+                            Generate comprehensive reports with findings, risk assessments, and actionable insights across all documents. Export results for team collaboration and decision-making.
+                        </p>
+                        <ul class="solution-features">
+                            <li>Executive summary dashboards</li>
+                            <li>Risk assessment matrices</li>
+                            <li>Detailed findings reports</li>
+                            <li>Export capabilities for sharing</li>
+                        </ul>
+                    </div>
+
+                    <div class="solution-card">
+                        <div class="solution-header">
+                            <h3 class="solution-title">Workflow Integration</h3>
+                            <p class="solution-subtitle">Seamless integration with existing legal workflows</p>
+                        </div>
+                        <p class="solution-description">
+                            Integrate batch review results into your existing legal workflows. Track resolution status, assign tasks, and collaborate with team members on findings.
+                        </p>
+                        <ul class="solution-features">
+                            <li>Task assignment and tracking</li>
+                            <li>Team collaboration tools</li>
+                            <li>Integration with legal management systems</li>
+                            <li>Audit trail and version control</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Simple Content Section -->
+        <!-- What is Batch Review -->
         <section class="simple-content">
             <div class="container">
-                <h2>What is Batch Review?</h2>
-                <p>
-                    Batch Review is a tool that helps lawyers review many legal documents at once. Instead of reading each document one by one, you can upload multiple documents and our system will analyze them all together.
-                </p>
-                <p>
-                    This is especially helpful for tasks like due diligence (checking contracts before a business deal), discovery (reviewing documents for a lawsuit), or compliance reviews (making sure documents follow legal rules).
-                </p>
                 
-                <h2>How Does It Help Lawyers?</h2>
-                <ul>
-                    <li><strong>Saves Time:</strong> Review 50+ documents in hours instead of days or weeks</li>
-                    <li><strong>Finds Important Information:</strong> Automatically highlights key clauses like termination rights, payment terms, and liability limits</li>
-                    <li><strong>Spots Problems:</strong> Identifies missing clauses, unusual terms, or potential legal risks</li>
-                    <li><strong>Creates Reports:</strong> Generates simple summaries of what was found across all documents</li>
-                </ul>
-                
-                <h2>Common Uses</h2>
-                <div class="simple-grid">
-                    <div class="simple-card">
-                        <h3>Contract Review</h3>
-                        <p>Quickly analyze vendor agreements, leases, or employment contracts to find unusual terms or missing protections.</p>
+                <!-- Professional Comparison Table -->
+                <div class="professional-comparison">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr class="comparison-header-row">
+                                <th>Traditional Document Review</th>
+                                <th>Enclaraa Batch Review</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="comparison-row">
+                                <td class="traditional-cell">
+                                    <div class="status-icon status-negative"></div>
+                                    <span class="status-text">Review each document individually - takes days or weeks</span>
+                                </td>
+                                <td class="enclaraa-cell">
+                                    <div class="status-icon status-positive"></div>
+                                    <span class="status-text">Process 50+ documents in hours, not days</span>
+                                </td>
+                            </tr>
+                            <tr class="comparison-row">
+                                <td class="traditional-cell">
+                                    <div class="status-icon status-negative"></div>
+                                    <span class="status-text">Manual highlighting and note-taking</span>
+                                </td>
+                                <td class="enclaraa-cell">
+                                    <div class="status-icon status-positive"></div>
+                                    <span class="status-text">AI-Assisted redlines and intelligent margin notes</span>
+                                </td>
+                            </tr>
+                            <tr class="comparison-row">
+                                <td class="traditional-cell">
+                                    <div class="status-icon status-negative"></div>
+                                    <span class="status-text">Risk of missing critical clauses</span>
+                                </td>
+                                <td class="enclaraa-cell">
+                                    <div class="status-icon status-positive"></div>
+                                    <span class="status-text">AI-Powered risk detection and flagging</span>
+                                </td>
+                            </tr>
+                            <tr class="comparison-row">
+                                <td class="traditional-cell">
+                                    <div class="status-icon status-negative"></div>
+                                    <span class="status-text">Inconsistent analysis across documents</span>
+                                </td>
+                                <td class="enclaraa-cell">
+                                    <div class="status-icon status-positive"></div>
+                                    <span class="status-text">Consistent analysis with comprehensive reporting</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="comparison-summary">
+                        <span class="summary-highlight">Transform Your Document Review Process</span>
+                        Save time, reduce errors, and improve consistency with Enclaraa's AI-powered batch review
                     </div>
-                    <div class="simple-card">
-                        <h3>Due Diligence</h3>
-                        <p>Review all contracts and agreements before a merger or acquisition to identify potential risks or liabilities.</p>
+                </div>
+
+                <!-- How It Works -->
+                <div class="how-it-works-section">
+                    <div class="how-it-works-header">
+                        <h2>How It Works - Simple Steps</h2>
+                        <p>Get started with batch review in just four easy steps</p>
                     </div>
-                    <div class="simple-card">
-                        <h3>Litigation Discovery</h3>
-                        <p>Sort through large document collections to find relevant evidence and key information for your case.</p>
-                    </div>
-                    <div class="simple-card">
-                        <h3>Compliance Checks</h3>
-                        <p>Verify that all your documents comply with new regulations or legal requirements.</p>
+                    
+                    <div class="steps-container">
+                        <div class="step-item">
+                            <div class="step-icon-only step-1">
+                                <i class="fas fa-upload"></i>
+                            </div>
+                            <h3>Upload Documents</h3>
+                            <p>Drag and drop files (PDF, Word, scanned documents) into our secure system</p>
+                        </div>
+                        <div class="icon-connector"></div>
+                        <div class="step-item">
+                            <div class="step-icon-only step-2">
+                                <i class="fas fa-cog"></i>
+                            </div>
+                            <h3>Set Parameters</h3>
+                            <p>Select what matters to you - specific clauses, potential risks, or other information</p>
+                        </div>
+                        <div class="icon-connector"></div>
+                        <div class="step-item">
+                            <div class="step-icon-only step-3">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>AI Analysis</h3>
+                            <p>Our AI processes all documents simultaneously, identifying key terms and risks</p>
+                        </div>
+                        <div class="icon-connector"></div>
+                        <div class="step-item">
+                            <div class="step-icon-only step-4">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <h3>Review Results</h3>
+                            <p>See a comprehensive dashboard showing findings across all documents</p>
+                        </div>
                     </div>
                 </div>
                 
-                <h2>How It Works - Simple Steps</h2>
-                <ol class="simple-steps">
-                    <li>
-                        <strong>Upload Your Documents</strong><br>
-                        Drag and drop files (PDF, Word, scanned documents) into our secure system
-                    </li>
-                    <li>
-                        <strong>Tell Us What to Look For</strong><br>
-                        Select what matters to you - specific clauses, potential risks, or other information
-                    </li>
-                    <li>
-                        <strong>Review the Results</strong><br>
-                        See a simple dashboard showing what was found in each document
-                    </li>
-                    <li>
-                        <strong>Share with Your Team</strong><br>
-                        Export reports or give colleagues access to review findings together
-                    </li>
-                </ol>
+                <!-- Common Use Cases -->
+                <h2>Common Use Cases</h2>
+                <p class="section-description">
+                    See how legal professionals use batch review across different practice areas
+                </p>
                 
+                <div class="common-uses-list">
+                    <div class="common-use-item">
+                        <div class="use-case-icon" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #3b82f6; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; background: white;">
+                            <i class="fas fa-file-contract" style="font-size: 2rem; color: #6b7280;"></i>
+                        </div>
+                        <div class="use-case-content">
+                            <h3>Contract Review</h3>
+                            <p class="subtitle">Quickly analyze vendor agreements, leases, or employment contracts</p>
+                            <p class="description">Perfect for reviewing multiple contracts to find unusual terms, missing protections, or inconsistent clauses across your contract portfolio.</p>
+                        </div>
+                    </div>
+
+                    <div class="common-use-item">
+                        <div class="use-case-icon" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #10b981; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; background: white;">
+                            <i class="fas fa-search-dollar" style="font-size: 2rem; color: #6b7280;"></i>
+                        </div>
+                        <div class="use-case-content">
+                            <h3>Due Diligence</h3>
+                            <p class="subtitle">Review all contracts before mergers, acquisitions, or investments</p>
+                            <p class="description">Essential for M&A transactions where you need to quickly identify potential risks, liabilities, and key terms across hundreds of documents.</p>
+                        </div>
+                    </div>
+
+                    <div class="common-use-item">
+                        <div class="use-case-icon" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #f59e0b; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; background: white;">
+                            <i class="fas fa-gavel" style="font-size: 2rem; color: #6b7280;"></i>
+                        </div>
+                        <div class="use-case-content">
+                            <h3>Litigation Discovery</h3>
+                            <p class="subtitle">Sort through large document collections for case preparation</p>
+                            <p class="description">Streamline discovery by quickly identifying relevant documents, key evidence, and important communications across massive document sets.</p>
+                        </div>
+                    </div>
+
+                    <div class="common-use-item">
+                        <div class="use-case-icon" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #8b5cf6; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; background: white;">
+                            <i class="fas fa-clipboard-check" style="font-size: 2rem; color: #6b7280;"></i>
+                        </div>
+                        <div class="use-case-content">
+                            <h3>Compliance Checks</h3>
+                            <p class="subtitle">Verify documents comply with new regulations or requirements</p>
+                            <p class="description">Ensure all your documents meet current legal standards and regulatory requirements with automated compliance checking.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Why Choose Batch Review -->
+                <section class="why-choose-section">
+                    <div class="why-choose-header">
+                        <h2>Why Choose Batch Review?</h2>
+                        <p>Transform your document review process with these key benefits</p>
+                    </div>
+                    
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <div class="benefit-icon" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #3b82f6; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; background: white;">
+                                <i class="fas fa-clock" style="font-size: 2rem; color: #6b7280;"></i>
+                            </div>
+                            <h3>Saves Time</h3>
+                            <p>Review 50+ documents in hours instead of days or weeks, freeing up time for higher-value legal work.</p>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #10b981; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; background: white;">
+                                <i class="fas fa-search" style="font-size: 2rem; color: #6b7280;"></i>
+                            </div>
+                            <h3>Finds Important Information</h3>
+                            <p><span class="highlight">Automatically</span> highlights key clauses like termination rights, payment terms, and liability limits.</p>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #f59e0b; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; background: white;">
+                                <i class="fas fa-exclamation-triangle" style="font-size: 2rem; color: #6b7280;"></i>
+                            </div>
+                            <h3>Spots Problems</h3>
+                            <p>Identifies missing clauses, unusual terms, or potential legal risks before they become issues.</p>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #8b5cf6; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; background: white;">
+                                <i class="fas fa-chart-bar" style="font-size: 2rem; color: #6b7280;"></i>
+                            </div>
+                            <h3>Creates Reports</h3>
+                            <p>Generates comprehensive summaries of findings across all documents for easy sharing and analysis.</p>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #ef4444; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; background: white;">
+                                <i class="fas fa-users" style="font-size: 2rem; color: #6b7280;"></i>
+                            </div>
+                            <h3>Team Collaboration</h3>
+                            <p>Share findings with colleagues and give team members access to review results together.</p>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #06b6d4; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; background: white;">
+                                <i class="fas fa-balance-scale" style="font-size: 2rem; color: #6b7280;"></i>
+                            </div>
+                            <h3>Consistent Analysis</h3>
+                            <p>Ensure uniform review standards across all documents with AI-powered consistency.</p>
+                        </div>
+                    </div>
+                </section>
+
+
             </div>
         </section>
     </main>
@@ -183,7 +412,7 @@
                     <h2>Ready to save hours on document review?</h2>
                     <div class="final-cta-buttons">
                         <button onclick="location.href='../../Demo'">Request a Demo</button>
-                        <button onclick="location.href='../../JoinWaitingList'">Join Waiting List</button>
+                        <button onclick="location.href='../../JoinWaitingList'">LETS JOIN</button>
                     </div>
                 </div>
             </div>
@@ -214,6 +443,54 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const pageTransition = document.querySelector('.page-transition');
+            const mainContent = document.querySelector('main');
+            
+            if (pageTransition) {
+                pageTransition.style.display = 'flex';
+                pageTransition.style.opacity = '1';
+            }
+            
+            if (mainContent) {
+                mainContent.style.opacity = '0';
+                mainContent.style.transform = 'translateY(20px)';
+            }
+            
+            setTimeout(function() {
+                if (pageTransition) {
+                    pageTransition.style.opacity = '0';
+                    setTimeout(function() {
+                        pageTransition.style.display = 'none';
+                    }, 1200);
+                }
+                
+                if (mainContent) {
+                    mainContent.style.transition = 'opacity 1.5s ease, transform 1.5s ease';
+                    mainContent.style.opacity = '1';
+                    mainContent.style.transform = 'translateY(0)';
+                }
+            }, 3000);
+        });
+        
+        document.addEventListener('click', function(e) {
+            const link = e.target.closest('a[href]');
+            if (link && !link.href.includes('#') && !link.target) {
+                e.preventDefault();
+                const pageTransition = document.querySelector('.page-transition');
+                
+                if (pageTransition) {
+                    pageTransition.style.display = 'flex';
+                    pageTransition.style.opacity = '1';
+                }
+                
+                setTimeout(function() {
+                    window.location.href = link.href;
+                }, 1500);
+            }
+        });
+    </script>
     <script src="../../script.js"></script>
 </body>
 </html>
