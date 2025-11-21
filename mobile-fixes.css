@@ -1,0 +1,342 @@
+/* ==========================================================================
+   MOBILE FIXES FOR VENRAG WEBSITE
+   ========================================================================== */
+
+/* Mobile Video Fixes */
+@media (max-width: 768px) {
+  /* Force video playback on mobile */
+  video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    -webkit-playsinline: true !important;
+    playsinline: true !important;
+    muted: true !important;
+    autoplay: true !important;
+    loop: true !important;
+    pointer-events: none !important;
+  }
+  
+  /* Video container fixes */
+  .video-left {
+    width: 50% !important;
+    height: 300px !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+  
+  /* Service card mobile layout */
+  .service-card.video-feature-card {
+    display: flex !important;
+    flex-direction: row !important;
+    height: 300px !important;
+    margin-bottom: 2rem !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+  }
+  
+  .service-card.video-feature-card-reverse {
+    flex-direction: row-reverse !important;
+  }
+  
+  /* Content area fixes */
+  .content-right {
+    width: 50% !important;
+    padding: 1rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    background: #1a1a1a !important;
+  }
+  
+  .content-right h2 {
+    font-size: 1.2rem !important;
+    color: white !important;
+    margin-bottom: 0.5rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  .content-right p {
+    font-size: 0.8rem !important;
+    color: #ccc !important;
+    line-height: 1.3 !important;
+    margin-bottom: 0.8rem !important;
+  }
+  
+  .explore-link {
+    font-size: 0.7rem !important;
+    color: var(--accent-color) !important;
+    padding: 0.3rem 0.6rem !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 4px !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    width: fit-content !important;
+  }
+  
+  /* Service tags mobile */
+  .service-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.2rem !important;
+    margin: 0.5rem 0 !important;
+  }
+  
+  .service-tags .tag {
+    font-size: 0.6rem !important;
+    padding: 0.2rem 0.4rem !important;
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    border-radius: 3px !important;
+    border: none !important;
+  }
+  
+  /* Hero section mobile fixes */
+  .legal-hero {
+    height: 100vh !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  .hero-content {
+    padding: 2rem 1rem !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.3rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .hero-description {
+    font-size: 1rem !important;
+    margin-bottom: 2rem !important;
+    max-width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  /* Stats section mobile */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+  }
+  
+  .stat-value {
+    font-size: 2rem !important;
+  }
+  
+  .stat-label {
+    font-size: 0.8rem !important;
+  }
+  
+  /* Enclara section mobile */
+  .enclara-section {
+    padding: 2rem 1rem !important;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  .enclara-inner {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 1.5rem !important;
+  }
+  
+  .enclara-text h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  .enclara-text p {
+    font-size: 1rem !important;
+  }
+  
+  .enclara-image img {
+    max-width: 80% !important;
+    height: auto !important;
+  }
+  
+  /* Integration section mobile */
+  .integration-section {
+    padding: 2rem 1rem !important;
+  }
+  
+  .integration-inner {
+    text-align: center !important;
+  }
+  
+  .integration-heading h2 {
+    font-size: 1.8rem !important;
+  }
+  
+  .integration-content p {
+    font-size: 1rem !important;
+  }
+  
+  /* Logo marquee mobile */
+  .marquee__group img {
+    height: 60px !important;
+    width: auto !important;
+  }
+  
+  /* Footer mobile fixes */
+  .footer-flex-container {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 1.5rem !important;
+  }
+  
+  .final-cta-logo {
+    max-width: 120px !important;
+    height: auto !important;
+  }
+  
+  .final-cta-content h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  .final-cta-buttons {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    width: 100% !important;
+  }
+  
+  .final-cta-buttons button {
+    width: 100% !important;
+    padding: 1rem !important;
+    font-size: 1rem !important;
+  }
+  
+  /* Mobile navigation fixes */
+  .mobile-nav {
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+  
+  .mobile-nav .nav-list {
+    width: 100% !important;
+    padding: 1rem 0 !important;
+  }
+  
+  .mobile-nav .nav-link {
+    width: 100% !important;
+    text-align: center !important;
+    padding: 1rem !important;
+  }
+  
+  /* Prevent horizontal scroll */
+  body, html {
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
+  
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 1rem !important;
+    overflow-x: hidden !important;
+  }
+  
+  section {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  
+  /* Image responsiveness */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* Text alignment fixes */
+  .services-section h1 {
+    text-align: center !important;
+    font-size: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  /* Video webkit fixes for iOS */
+  video::-webkit-media-controls {
+    display: none !important;
+  }
+  
+  video::-webkit-media-controls-panel {
+    display: none !important;
+  }
+  
+  video::-webkit-media-controls-play-button {
+    display: none !important;
+  }
+  
+  video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+  }
+  
+  /* Force video autoplay on mobile */
+  .video-left video {
+    -webkit-playsinline: true;
+    playsinline: true;
+    muted: true;
+    autoplay: true;
+    loop: true;
+    controls: false;
+    preload: "auto";
+  }
+}
+
+/* Tablet specific fixes */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .service-card.video-feature-card {
+    height: 400px !important;
+  }
+  
+  .content-right {
+    padding: 2rem !important;
+  }
+  
+  .content-right h2 {
+    font-size: 1.8rem !important;
+  }
+  
+  .content-right p {
+    font-size: 1rem !important;
+  }
+}
+
+/* Ultra-wide mobile fixes */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem !important;
+  }
+  
+  .hero-description {
+    font-size: 0.9rem !important;
+  }
+  
+  .content-right h2 {
+    font-size: 1rem !important;
+  }
+  
+  .content-right p {
+    font-size: 0.7rem !important;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.5rem !important;
+  }
+}
