@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Vault | Enclaraa</title>
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="../../logo/VenRAAG_logo.JPG" as="image">
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../feature-styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../logo/VenRAAG_logo_icon.ico">
+</head>
+<body>
+    <!-- Page Transition Overlay -->
+    <div class="page-transition">
+        <a href="../../index.html">
+            <img src="../../logo/VenRAAG_logo.JPG" alt="VenRAAG Logo" class="transition-logo">
+        </a>
+
+    </div>
+
+    <!-- Announcement bar -->
+    <div class="announcement-bar">
+
+
+    </div>
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <div class="logo">
+                    <a href="../../index.html">
+                        <img src="../../logo/VenRAAG_logo.JPG" alt="LegalTech AI Logo" class="logo-img">
+                    </a>
+                </div>
+                <a href="../../index.html">
+                    <h1 class="header-title">Enclaraa | VenRAAG</h1>
+                </a>
+            </div>
+            <nav class="desktop-nav">
+                <ul class="nav-list">
+                    <li><a href="../../Home" class="nav-link"><span>Home</span></a></li>
+                    <li><a href="../../About" class="nav-link"><span>About</span></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link active"><span>Features</span></a>
+                        <div class="dropdown-content">
+                            <a href="../legal-intelligence">Legal Intelligence</a>
+                            <a href="../document-drafting">Document Drafting</a>
+                            <a href="../batch-review">Batch Review</a>
+                            <a href="../workflow-hub">Workflow Hub</a>
+                            <a href="../knowledge-vault" class="active">Knowledge Vault</a>
+                            <a href="../security">Enterprise Security</a>
+                        </div>
+                    </li>
+                   
+
+                </ul>
+            <ul class="nav-list-cta">
+                <li><a href="../../Demo" class="nav-link cta"><span>Request Demo</span></a></li>
+            </ul>
+            </nav>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <div class="mobile-nav" id="mobileNav">
+            <div class="container">
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="../../Home" class="nav-link">Home</a></li>
+                    <li><a href="../../About" class="nav-link">About</a></li>
+                    <li>
+                        <span class="nav-link dropdown-toggle" onclick="toggleFeaturesDropdown(event)">
+                            Features <i class="fas fa-chevron-down"></i>
+                        </span>
+                        <div class="features-dropdown">
+                            <a href="../legal-intelligence" class="nav-link sub-link">Legal Intelligence</a>
+                            <a href="../document-drafting" class="nav-link sub-link">Document Drafting</a>
+                            <a href="../batch-review" class="nav-link sub-link">Batch Review</a>
+                            <a href="../workflow-hub" class="nav-link sub-link">Workflow Hub</a>
+                            <a href="../knowledge-vault" class="nav-link sub-link active">Knowledge Vault</a>
+                            <a href="../security" class="nav-link sub-link">Enterprise Security</a>
+                        </div>
+                    </li>
+                    
+                    <li><a href="../../TalkToExpert" class="nav-link-cta">Talk to an Expert</a></li>
+                    <li><a href="../../Demo" class="nav-link-cta">Request Demo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    </header>
+
+    <main>
+        <!-- venraag-style Hero -->
+        <section class="venraag-hero">
+            <div class="container">
+                <h1>Knowledge Vault</h1>
+                <p>Store cases, contracts, and opinions with full access control and version tracking. Instantly searchable and ready to use across matters.</p>
+            </div>
+        </section>
+
+        <!-- Solutions Section -->
+        <section class="simple-content">
+            <div class="container">
+                <h2>Solutions</h2>
+                
+                <div class="simple-grid">
+                    <div class="simple-card">
+                        <h3>Secure Document Storage</h3>
+                        <p><strong>Enterprise-grade security for legal documents</strong></p>
+                        <p>Store all your legal documents in a secure, encrypted digital vault with enterprise-grade protection. Access controls ensure only authorized personnel can view sensitive information.</p>
+                        <ul>
+                            <li>End-to-end encryption</li>
+                            <li>Role-based access controls</li>
+                            <li>Audit trails and compliance</li>
+                            <li>Automated backup and recovery</li>
+                        </ul>
+                    </div>
+
+                    <div class="simple-card">
+                        <h3>Intelligent Search</h3>
+                        <p><strong>AI-powered search across all legal content</strong></p>
+                        <p>Find any document instantly with AI-powered search that understands legal terminology and context. Search across cases, contracts, briefs, and research materials simultaneously.</p>
+                        <ul>
+                            <li>Natural language search</li>
+                            <li>Legal terminology recognition</li>
+                            <li>Cross-document analysis</li>
+                            <li>Semantic content matching</li>
+                        </ul>
+                    </div>
+
+                    <div class="simple-card">
+                        <h3>Knowledge Organization</h3>
+                        <p><strong>Intelligent categorization and tagging</strong></p>
+                        <p>AI-powered categorization helps organize documents automatically with smart tagging and classification. Build a structured knowledge base that grows with your practice.</p>
+                        <ul>
+                            <li>Automatic document classification</li>
+                            <li>Smart tagging and metadata</li>
+                            <li>Custom taxonomy creation</li>
+                            <li>Relationship mapping</li>
+                        </ul>
+                    </div>
+
+                    <div class="simple-card">
+                        <h3>Collaboration Tools</h3>
+                        <p><strong>Team knowledge sharing and collaboration</strong></p>
+                        <p>Enable seamless knowledge sharing across your legal team. Collaborate on documents, share insights, and build institutional knowledge that benefits the entire organization.</p>
+                        <ul>
+                            <li>Team workspaces</li>
+                            <li>Document annotation and comments</li>
+                            <li>Knowledge sharing workflows</li>
+                            <li>Version control and history</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legal Brain Interface -->
+        <section class="legal-brain-section" style="padding: 6rem 0;">
+            <div class="container">
+                <div class="brain-interface">
+                    <div class="brain-content">
+                        <div class="brain-header" style="text-align: center; margin-bottom: 4rem;">
+                            <h2 style="color: var(--primary-color); font-size: 2.5rem; margin-bottom: 1rem;">Your Firm's Legal Brain</h2>
+                            <p style="color: var(--text-light); font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Transform how your firm stores, organizes, and accesses legal knowledge</p>
+                        </div>
+                        <div class="brain-features" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; max-width: 1200px; margin: 0 auto;">
+                            <div class="feature-card" style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2.5rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                                <div class="feature-content">
+                                    <h3 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.5rem;">Secure Digital Library</h3>
+                                    <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 1.5rem;">Store all your legal documents and information in one encrypted, searchable location with enterprise-grade security.</p>
+                                    <div class="feature-highlights" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                                        <span style="background: #e6f0ff; color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">Encrypted Storage</span>
+                                        <span style="background: #e6f0ff; color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">Instant Search</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="feature-card" style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2.5rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                                <div class="feature-content">
+                                    <h3 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.5rem;">Intelligent Organization</h3>
+                                    <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 1.5rem;">AI-powered categorization helps law firms organize and find documents instantly with smart tagging and classification.</p>
+                                    <div class="feature-highlights" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                                        <span style="background: #e6f0ff; color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">Auto-Categorization</span>
+                                        <span style="background: #e6f0ff; color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">Smart Tags</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="feature-card" style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2.5rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                                <div class="feature-content">
+                                    <h3 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.5rem;">Protected Knowledge</h3>
+                                    <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 1.5rem;">Keep valuable legal knowledge safe and accessible to the right people with advanced security and granular access controls.</p>
+                                    <div class="feature-highlights" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                                        <span style="background: #e6f0ff; color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">Role-Based Access</span>
+                                        <span style="background: #e6f0ff; color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">Audit Trails</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="benefits-section">
+            <div class="container">
+                <div class="benefits-header">
+                    <h2 style="text-align: center; width: 100%; margin: 6rem auto 4rem auto; font-size: 2.5rem; font-weight: 600;">How Does It Help Lawyers?</h2>
+                </div>
+                <div class="benefits-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+                    <div class="benefit-card" style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <div class="benefit-icon" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #3b82f6; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; background: white;">
+                            <i class="fas fa-search" style="font-size: 2rem; color: #6b7280;"></i>
+                        </div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.25rem;">Saves Time</h3>
+                        <p style="color: var(--text-light); line-height: 1.6; margin: 0;">Makes documents easy to find with legal-specific search, reducing research time from hours to minutes.</p>
+                    </div>
+                    <div class="benefit-card" style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <div class="benefit-icon" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #10b981; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; background: white;">
+                            <i class="fas fa-shield-alt" style="font-size: 2rem; color: #6b7280;"></i>
+                        </div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.25rem;">Keeps Information Secure</h3>
+                        <p style="color: var(--text-light); line-height: 1.6; margin: 0;">Protects client information with enterprise-grade security and granular access controls.</p>
+                    </div>
+                    <div class="benefit-card" style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <div class="benefit-icon" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #f59e0b; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; background: white;">
+                            <i class="fas fa-user-graduate" style="font-size: 2rem; color: #6b7280;"></i>
+                        </div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.25rem;">Prevents Knowledge Loss</h3>
+                        <p style="color: var(--text-light); line-height: 1.6; margin: 0;">Preserves institutional knowledge when lawyers leave your firm, maintaining continuity.</p>
+                    </div>
+                    <div class="benefit-card" style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <div class="benefit-icon" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #8b5cf6; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; background: white;">
+                            <i class="fas fa-recycle" style="font-size: 2rem; color: #6b7280;"></i>
+                        </div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.25rem;">Enables Work Reuse</h3>
+                        <p style="color: var(--text-light); line-height: 1.6; margin: 0;">Makes it easy to find and reuse work from previous similar cases, improving efficiency.</p>
+                    </div>
+                    <div class="benefit-card" style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); grid-column: 2;">
+                        <div class="benefit-icon" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #ef4444; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; background: white;">
+                            <i class="fas fa-history" style="font-size: 2rem; color: #6b7280;"></i>
+                        </div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.25rem;">Creates Complete History</h3>
+                        <p style="color: var(--text-light); line-height: 1.6; margin: 0;">Maintains comprehensive audit trails of document changes and access for compliance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Cases Section -->
+        <section class="use-cases-section">
+            <div class="container">
+                <div class="use-cases-header">
+                    <h2 style="text-align: center; width: 100%; margin: 0 auto;">Common Uses</h2>
+                </div>
+                <div class="use-cases-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+                    <div class="use-case-card" style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: none; transform: none;">
+                        <div class="use-case-icon" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #3b82f6; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; background: white;">
+                            <i class="fas fa-gavel" style="font-size: 2rem; color: #6b7280;"></i>
+                        </div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.25rem;">Precedent Management</h3>
+                        <p style="color: var(--text-light); line-height: 1.6; margin: 0;">Store and easily find previous case documents, briefs, and opinions to build on past work.</p>
+                    </div>
+                    <div class="use-case-card" style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: none; transform: none;">
+                        <div class="use-case-icon" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #10b981; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; background: white;">
+                            <i class="fas fa-file-contract" style="font-size: 2rem; color: #6b7280;"></i>
+                        </div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.25rem;">Contract Repository</h3>
+                        <p style="color: var(--text-light); line-height: 1.6; margin: 0;">Organize all client contracts with version tracking and quick clause search capabilities.</p>
+                    </div>
+                    <div class="use-case-card" style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: none; transform: none;">
+                        <div class="use-case-icon" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #f59e0b; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; background: white;">
+                            <i class="fas fa-book" style="font-size: 2rem; color: #6b7280;"></i>
+                        </div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.25rem;">Legal Research Library</h3>
+                        <p style="color: var(--text-light); line-height: 1.6; margin: 0;">Build a searchable collection of research memos, case law summaries, and legal analyses.</p>
+                    </div>
+                    <div class="use-case-card" style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: none; transform: none;">
+                        <div class="use-case-icon" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #8b5cf6; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; background: white;">
+                            <i class="fas fa-folder-open" style="font-size: 2rem; color: #6b7280;"></i>
+                        </div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.25rem;">Client Matter Management</h3>
+                        <p style="color: var(--text-light); line-height: 1.6; margin: 0;">Keep all documents for each client matter organized in one secure, accessible location.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Security Section -->
+        <section class="security-section" style="padding: 4rem 0;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="color: var(--primary-color); font-size: 2.5rem; margin-bottom: 1rem;">Comprehensive Security Features</h2>
+                    <p style="color: var(--text-light); font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Multi-layered security architecture designed specifically for legal professionals</p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+                    <div style="background: white; border: 1px solid #e2e8f0; border-radius: 16px; padding: 2.5rem; text-align: center; box-shadow: 0 8px 32px rgba(0,0,0,0.08);">
+                        <div style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #3b82f6; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; background: white;">
+                            <i class="fas fa-shield-alt" style="font-size: 2rem; color: #6b7280;"></i>
+                        </div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 0; font-size: 1.25rem;">Advanced Encryption</h3>
+                    </div>
+                    
+                    <div style="background: white; border: 1px solid #e2e8f0; border-radius: 16px; padding: 2.5rem; text-align: center; box-shadow: 0 8px 32px rgba(0,0,0,0.08);">
+                        <div style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #10b981; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; background: white;">
+                            <i class="fas fa-user-shield" style="font-size: 2rem; color: #6b7280;"></i>
+                        </div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 0; font-size: 1.25rem;">Identity & Access Management</h3>
+                    </div>
+                    
+                    <div style="background: white; border: 1px solid #e2e8f0; border-radius: 16px; padding: 2.5rem; text-align: center; box-shadow: 0 8px 32px rgba(0,0,0,0.08);">
+                        <div style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #f59e0b; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; background: white;">
+                            <i class="fas fa-clipboard-list" style="font-size: 2rem; color: #6b7280;"></i>
+                        </div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 0; font-size: 1.25rem;">Audit & Monitoring</h3>
+                    </div>
+                    
+                    <div style="background: white; border: 1px solid #e2e8f0; border-radius: 16px; padding: 2.5rem; text-align: center; box-shadow: 0 8px 32px rgba(0,0,0,0.08);">
+                        <div style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #8b5cf6; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; background: white;">
+                            <i class="fas fa-server" style="font-size: 2rem; color: #6b7280;"></i>
+                        </div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 0; font-size: 1.25rem;">Infrastructure Security</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="merged-footer">
+        <div class="footer-cta">
+            <div class="container footer-flex-container">
+                <div class="footer-logo-container">
+                    <img src="../../logo/VenRAAG_logo_blue.png" alt="VenRAAG Logo" class="final-cta-logo">
+                </div>
+                <div class="final-cta-content">
+                    <h2>Ready to see Enclaraa in action?</h2>
+                    <div class="final-cta-buttons">
+                        <button onclick="location.href='../../Demo'">Request a Demo</button>
+                        <button onclick="location.href='../../JoinWaitingList'">LETS JOIN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-separator"></div>
+        
+        <div class="footer-info">
+            <div class="container footer-container">
+                <div class="footer-links">
+                    <a href="../../About" class="nav-link">About</a>
+                    <a href="../../Privacy" class="nav-link">Privacy Policy</a>
+                    <a href="../../Terms" class="nav-link">Terms of Use</a>
+                </div>
+                <p>2025 LegalTech AI - All rights reserved.</p>
+                <div class="social-media">
+                    <a href="https://x.com/VenRAAG_X" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/venraag/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/venraag/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const pageTransition = document.querySelector('.page-transition');
+            const mainContent = document.querySelector('main');
+            
+            if (pageTransition) {
+                pageTransition.style.display = 'flex';
+                pageTransition.style.opacity = '1';
+            }
+            
+            if (mainContent) {
+                mainContent.style.opacity = '0';
+                mainContent.style.transform = 'translateY(20px)';
+            }
+            
+            setTimeout(function() {
+                if (pageTransition) {
+                    pageTransition.style.opacity = '0';
+                    setTimeout(function() {
+                        pageTransition.style.display = 'none';
+                    }, 1200);
+                }
+                
+                if (mainContent) {
+                    mainContent.style.transition = 'opacity 1.5s ease, transform 1.5s ease';
+                    mainContent.style.opacity = '1';
+                    mainContent.style.transform = 'translateY(0)';
+                }
+            }, 3000);
+        });
+        
+        document.addEventListener('click', function(e) {
+            const link = e.target.closest('a[href]');
+            if (link && !link.href.includes('#') && !link.target) {
+                e.preventDefault();
+                const pageTransition = document.querySelector('.page-transition');
+                
+                if (pageTransition) {
+                    pageTransition.style.display = 'flex';
+                    pageTransition.style.opacity = '1';
+                }
+                
+                setTimeout(function() {
+                    window.location.href = link.href;
+                }, 1500);
+            }
+        });
+    </script>
+</body>
+</html>

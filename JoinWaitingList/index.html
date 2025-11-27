@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VenRAAG | Join Waiting List</title>
+  <meta name="description" content="Join the waiting list for early access to Enclaraa, the on-premises legal AI platform">
+  <link rel="preload" href="../logo/VenRAAG_logo.JPG" as="image">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../styles.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../logo/VenRAAG_logo_icon.ico">
+</head>
+<body>
+  <!-- Page Transition Overlay -->
+  <div class="page-transition">
+    <a href="../index.html">
+      <img src="../logo/VenRAAG_logo.JPG" alt="VenRAAG Logo" class="transition-logo">
+    </a>
+  </div>
+
+  <!-- Announcement bar -->
+  <div class="announcement-bar">
+
+
+  </div>
+
+ <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <div class="logo-container">
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../logo/VenRAAG_logo.JPG" alt="VenRAAG Logo" class="logo-img">
+          </a>
+        </div>
+        <a href="../index.html">
+          <h1 class="header-title">Enclaraa | VenRAAG</h1>
+          </a>
+      </div>
+      <nav class="desktop-nav">
+        <ul class="nav-list">
+            <li><a href="../Home" class="nav-link"><span>Home</span></a></li>
+            <li><a href="../About" class="nav-link"><span>About</span></a></li>
+            <li class="dropdown">
+                <a href="#" class="nav-link"><span>Features</span></a>
+                <div class="dropdown-content">
+                    <a href="../Features/legal-intelligence">Legal Intelligence</a>
+                    <a href="../Features/document-drafting">Document Drafting</a>
+                    <a href="../Features/batch-review">Batch Review</a>
+                    <a href="../Features/workflow-hub">Workflow Hub</a>
+                    <a href="../Features/knowledge-vault">Knowledge Vault</a>
+                    <a href="../Features/security">Enterprise Security</a>
+                </div>
+            </li>
+           
+        </ul>
+        <ul class="nav-list-cta">
+          
+          <li><a href="../Demo" class="nav-link cta"><span>Request Demo</span></a></li>
+        </ul>
+      </nav>
+    
+      <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="mobile-nav" id="mobileNav">
+        <div class="container">
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="../Home" class="nav-link">Home</a></li>
+                    <li><a href="../About" class="nav-link">About</a></li>
+                    <li>
+                        <span class="nav-link dropdown-toggle" onclick="toggleFeaturesDropdown(event)">
+                            Features <i class="fas fa-chevron-down"></i>
+                        </span>
+                        <div class="features-dropdown">
+                            <a href="../Features/legal-intelligence" class="nav-link sub-link">Legal Intelligence</a>
+                            <a href="../Features/document-drafting" class="nav-link sub-link">Document Drafting</a>
+                            <a href="../Features/batch-review" class="nav-link sub-link active">Batch Review</a>
+                            <a href="../Features/workflow-hub" class="nav-link sub-link">Workflow Hub</a>
+                            <a href="../Features/knowledge-vault" class="nav-link sub-link">Knowledge Vault</a>
+                            <a href="../Features/security" class="nav-link sub-link">Enterprise Security</a>
+                        </div>
+                    </li>
+                    
+                    <li><a href="../TalkToExpert" class="nav-link-cta">Talk to an Expert</a></li>
+                    <li><a href="../Demo" class="nav-link-cta">Request Demo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+  </header>
+  
+  <!-- Main Content -->
+  <main class="split-layout">
+    <div class="left-content">
+      <div class="content-wrapper">
+        <h1 style="text-align: center;">Join the Future</h1>
+        <p>Be among the first to experience Enclaraa, the next-generation legal AI platform designed for professional excellence.</p>
+      </div>
+    </div>
+    <div class="right-form">
+      <div class="form-container">
+        <form id="waitingListForm" action="https://formspree.io/f/xqapeyzp" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name *</label>
+              <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+            </div>
+            <div class="form-group">
+              <label>Last Name *</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Business Email *</label>
+            <input type="email" id="businessEmail" name="businessEmail" placeholder="Your Business Email" required>
+          </div>
+          <div class="form-group">
+            <label>Company/Organization *</label>
+            <input type="text" id="company" name="company" placeholder="Your Company or Organization" required>
+          </div>
+          <div class="form-group">
+            <label>Job Title *</label>
+            <input type="text" id="jobTitle" name="jobTitle" placeholder="Your Job Title" required>
+          </div>
+          <div class="form-group">
+            <label>Industry *</label>
+            <select id="industry" name="industry" required>
+              <option value="" disabled selected>Select your industry</option>
+              <option value="legal">Legal Services</option>
+              <option value="corporate">Corporate Legal Department</option>
+              <option value="government">Government</option>
+              <option value="education">Education</option>
+              <option value="finance">Finance</option>
+              <option value="healthcare">Healthcare</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>How would you like to use Enclaraa? *</label>
+            <textarea id="useCase" name="useCase" placeholder="Describe how you plan to use Enclaraa in your organization" required></textarea>
+          </div>
+          <p class="required-fields-note">* All fields are required</p>
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="emailConsent" name="emailConsent">
+            <label for="emailConsent">I agree to receive product updates and early access information from VenRAAG</label>
+          </div>
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="termsConsent" name="termsConsent" required>
+            <label for="termsConsent">I agree to VenRAAG's <a href="../Terms" target="_blank" rel="noopener noreferrer">Terms of Use</a> and <a href="../Privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> *</label>
+          </div>
+          <button type="submit" class="request-demo-btn">LETS JOIN</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  
+
+  <footer class="merged-footer">
+    <div class="footer-cta">
+      <div class="container footer-flex-container">
+        <div class="footer-logo-container">
+          <img src="../logo/VenRAAG_logo_blue.png" alt="VenRAAG Logo" class="final-cta-logo">
+        </div>
+        <div class="final-cta-content">
+          <h2>Thank you for joining the Enclaraa waiting list!</h2>
+          <p style="color: white;">You'll be among the first to know when Enclaraa is ready for early access. We'll keep you updated on our progress.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-separator"></div>
+    
+    <div class="footer-info">
+      <div class="container footer-container">
+        <div class="footer-links">
+          <a href="../About" class="nav-link">About</a>
+          <a href="../Privacy" class="nav-link">Privacy Policy</a>
+          <a href="../Terms" class="nav-link">Terms of Use</a>
+        </div>
+        <p>2025 VenRAAG - All rights reserved.</p>
+        <div class="social-media">
+          <a href="https://x.com/VenRAAG_X" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/venraag/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://www.instagram.com/venraag/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="../script.js" defer></script>
+</body>
+</html>
