@@ -42,3 +42,9 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         continue-on-error: false
+        timeout-minutes: 10
+      - name: Handle deployment failure
+        if: failure()
+        run: |
+          echo "Deployment failed. Check the logs above for details."
+          exit 1

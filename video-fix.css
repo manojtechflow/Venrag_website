@@ -1,14 +1,21 @@
 /* Video Controls Fix for All Devices */
 video {
-  pointer-events: none !important;
+  pointer-events: auto;
   -webkit-touch-callout: none !important;
   -webkit-user-select: none !important;
   -khtml-user-select: none !important;
   -moz-user-select: none !important;
   -ms-user-select: none !important;
   user-select: none !important;
+  /* iOS Safari specific fixes */
+  -webkit-playsinline: true;
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
+/* Hide native video controls */
 video::-webkit-media-controls {
   display: none !important;
 }
@@ -29,10 +36,46 @@ video::-webkit-media-controls-enclosure {
   display: none !important;
 }
 
+/* Webkit specific video fixes */
+video::-webkit-media-controls-fullscreen-button {
+  display: none !important;
+}
+
+video::-webkit-media-controls-volume-slider {
+  display: none !important;
+}
+
+video::-webkit-media-controls-timeline {
+  display: none !important;
+}
+
+video::-webkit-media-controls-current-time-display {
+  display: none !important;
+}
+
+video::-webkit-media-controls-time-remaining-display {
+  display: none !important;
+}
+
+/* Container fixes */
 .video-left {
-  pointer-events: none !important;
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
 }
 
 .video-left video {
-  pointer-events: none !important;
+  width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: auto;
+}
+
+/* iOS Safe Area Support */
+@supports (padding: max(0px)) {
+  video {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+  }
 }

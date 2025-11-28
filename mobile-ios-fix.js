@@ -24,31 +24,40 @@ document.addEventListener('DOMContentLoaded', function() {
             // Disable video controls completely
             video.controls = false;
             video.disablePictureInPicture = true;
-            video.style.pointerEvents = 'none';
             
-            // Force play
+            // For iOS: keep pointer events for potential user interaction to trigger play
+            if (!isIOS) {
+                video.style.pointerEvents = 'none';
+            }
+            
+            // Force play with better error handling for iOS
             const playVideo = () => {
-                video.play().catch(e => {
-                    console.log('Video autoplay failed');
-                });
+                const playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        console.log('Video autoplay restricted:', error);
+                        // On iOS, user interaction may be required
+                        if (isIOS) {
+                            document.addEventListener('touchstart', function attemptPlay() {
+                                video.play().catch(e => console.log('Play after touch failed'));
+                                document.removeEventListener('touchstart', attemptPlay);
+                            }, { once: true });
+                        }
+                    });
+                }
             };
             
+            // Try to play immediately
             playVideo();
             video.addEventListener('loadeddata', playVideo);
             video.addEventListener('canplay', playVideo);
             
-            // Prevent any interaction with video
-            video.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                return false;
-            });
-            
-            video.addEventListener('touchstart', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                return false;
-            });
+            // For iOS: allow one user interaction to ensure video plays
+            if (isIOS) {
+                video.addEventListener('touchend', (e) => {
+                    video.play().catch(err => console.log('Play on touch:', err));
+                }, { once: true });
+            }
         });
         
         // iOS specific fixes

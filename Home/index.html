@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="VenRAAG">
   <title>Enclaraa - Advanced Legal Intelligence Platform | Home</title>
   <meta name="description" content="Revolutionize your legal practice with AI-driven case analysis and document intelligence">
   <!-- Preload Critical Resources -->
@@ -13,8 +16,23 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../feature-styles.css">
+  <link rel="stylesheet" href="../video-fix.css">
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="../logo/VenRAAG_logo_icon.ico">
+  <!-- iOS Video Fix Script - Load Early -->
+  <script>
+    // Immediate iOS video detection and fix
+    (function() {
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+      if (isIOS) {
+        document.documentElement.setAttribute('data-device', 'ios');
+        // Prevent double-tap zoom on videos
+        document.addEventListener('touchmove', function(e) {
+          if (e.touches.length > 1) e.preventDefault();
+        }, { passive: false });
+      }
+    })();
+  </script>
 </head>
 <body class="home-page">
   <!-- Page Transition Overlay -->
@@ -132,7 +150,7 @@
             Enclaraa combines powerful legal AI with enterprise-grade security. Analyze, draft, and manage legal workflows at scale while keeping full control over your data.
           </p>
           <div class="enclara-cta" style="text-align: center; margin-top: 20px;">
-            <button onclick="location.href='../JoinWaitingList'" class="waitlist-btn">LETS JOIN</button>
+            <button onclick="location.href='../JoinWaitingList'" class="waitlist-btn">LET'S     JOIN</button>
           </div>
         </div>
       </div>
@@ -149,7 +167,7 @@
             <div class="services-grid">
                 <div class="service-card video-feature-card">
                     <div class="video-left">
-                        <video autoplay muted loop disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+                        <video autoplay muted loop playsinline webkit-playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
                             <source src="../logo/VenRAAG Vedio.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -168,7 +186,7 @@
                         <a href="../Features/document-drafting" class="explore-link">Explore Intelligence →</a>
                     </div>
                     <div class="video-left">
-                        <video autoplay muted loop>
+                        <video autoplay muted loop playsinline webkit-playsinline>
                             <source src="../logo/VenRAAG Vedio - 2.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -177,7 +195,7 @@
 
                 <div class="service-card video-feature-card">
                     <div class="video-left">
-                        <video autoplay muted loop disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+                        <video autoplay muted loop playsinline webkit-playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
                             <source src="../logo/VenRAAG Vedio - 3.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -206,7 +224,7 @@
                         <a href="../Features/workflow-hub" class="explore-link">Explore Automation →</a>
                     </div>
                     <div class="video-left">
-                        <video autoplay muted loop disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+                        <video autoplay muted loop playsinline webkit-playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
                             <source src="../logo/VenRAAG Vedio - 4.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -284,7 +302,7 @@
 
             <div class="video-container">
                 <div class="video-wrapper scroll-video">
-                    <video autoplay muted loop disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback" style="width: 100%; height: auto;">
+                    <video autoplay muted loop playsinline webkit-playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback" style="width: 100%; height: auto;">
                         <source src="../logo/Lawyers  Talking vedio.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
