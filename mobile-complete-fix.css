@@ -207,17 +207,20 @@
   
   .video-left {
     width: 100% !important;
-    height: 200px !important;
+    height: auto !important;
     position: relative !important;
-    overflow: hidden !important;
+    overflow: visible !important;
+    display: block !important;
   }
-  
+
   .video-left video {
     width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
+    height: auto !important;
+    max-height: 60vh !important;
+    object-fit: contain !important;
     display: block !important;
-    pointer-events: none !important;
+    pointer-events: auto !important;
+    background-color: #000 !important;
   }
   
   .content-right {
