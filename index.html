@@ -2,33 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="VenRAAG">
   <title>Enclaraa - Advanced Legal Intelligence Platform | Home</title>
   <meta name="description" content="Revolutionize your legal practice with AI-driven case analysis and document intelligence">
   <!-- Preload Critical Resources -->
-  <link rel="preload" href="./logo/VenRAAG_logo.JPG" as="image">
+  <link rel="preload" href="../logo/VenRAAG_logo.JPG" as="image">
   <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Georgia:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous">
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="./styles.css">
-  <link rel="stylesheet" href="./cookie-consent.css">
-  <link rel="stylesheet" href="./feature-styles.css">
-  <link rel="stylesheet" href="./mobile-complete-fix.css">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../feature-styles.css">
+  <link rel="stylesheet" href="../video-fix.css">
+  <link rel="stylesheet" href="../mobile-complete-fix.css" media="(max-width: 768px)">
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="./logo/VenRAAG_logo_icon.ico">
+  <link rel="icon" type="image/x-icon" href="../logo/VenRAAG_logo_icon.ico">
+  <!-- iOS Video Fix Script - Load Early -->
+  <script>
+    // Immediate iOS video detection and fix
+    (function() {
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+      if (isIOS) {
+        document.documentElement.setAttribute('data-device', 'ios');
+        // Prevent double-tap zoom on videos
+        document.addEventListener('touchmove', function(e) {
+          if (e.touches.length > 1) e.preventDefault();
+        }, { passive: false });
+      }
+    })();
+  </script>
 </head>
 <body class="home-page">
   <!-- Page Transition Overlay -->
   <div class="page-transition">
-    <a href="./index.html">
-      <img src="./logo/VenRAAG_logo.JPG" alt="VenRAAG Logo" class="transition-logo">
+    <a href="../index.html">
+      <img src="../logo/VenRAAG_logo.JPG" alt="VenRAAG Logo" class="transition-logo">
     </a>
   </div>
 
   <!-- Announcement bar -->
   <div class="announcement-bar">
-
   </div>
   
   <!-- Header -->
@@ -36,63 +52,63 @@
     <div class="container header-container">
       <div class="logo-container">
         <div class="logo">
-          <a href="./index.html">
-            <img src="./logo/VenRAAG_logo.JPG" alt="LegalTech AI Logo" class="logo-img">
+          <a href="../index.html">
+            <img src="../logo/VenRAAG_logo.JPG" alt="LegalTech AI Logo" class="logo-img">
           </a>
         </div>
-        <a href="./index.html">
+        <a href="../index.html">
           <h1 class="header-title">Enclaraa | VenRAAG</h1>
         </a>
       </div>
       <nav class="desktop-nav">
         <ul class="nav-list">
-            <li><a href="./Home" class="nav-link"><span>Home</span></a></li>
-            <li><a href="./About" class="nav-link"><span>About</span></a></li>
+            <li><a href="../Home" class="nav-link active"><span>Home</span></a></li>
+            <li><a href="../About" class="nav-link"><span>About</span></a></li>
             <li class="dropdown">
                 <a href="#" class="nav-link"><span>Features</span></a>
                 <div class="dropdown-content">
-                    <a href="./Features/legal-intelligence">Legal Intelligence</a>
-                    <a href="./Features/document-drafting">Document Drafting</a>
-                    <a href="./Features/batch-review">Batch Review</a>
-                    <a href="./Features/workflow-hub">Workflow Hub</a>
-                    <a href="./Features/knowledge-vault">Knowledge Vault</a>
-                    <a href="./Features/security">Enterprise Security</a>
+                    <a href="../Features/legal-intelligence">Legal Intelligence</a>
+                    <a href="../Features/document-drafting">Document Drafting</a>
+                    <a href="../Features/batch-review">Batch Review</a>
+                    <a href="../Features/workflow-hub">Workflow Hub</a>
+                    <a href="../Features/knowledge-vault">Knowledge Vault</a>
+                    <a href="../Features/security">Enterprise Security</a>
                 </div>
             </li>
             
         </ul>
 
         <ul class="nav-list-cta">
-          <li><a href="Demo" class="nav-link cta"><span>Request Demo</span></a></li>
+          <li><a href="../Demo" class="nav-link cta"><span>Request Demo</span></a></li>
         </ul>
 
       </nav>
     
       <div class="menu-icon" onclick="toggleMenu()">
-        <i class="fas fa-bars" aria-label="Menu"></i>
+        <i class="fas fa-bars"></i>
       </div>
       <div class="mobile-nav" id="mobileNav">
         <div class="container">
             <nav>
                 <ul class="nav-list">
-                    <li><a href="./Home" class="nav-link">Home</a></li>
-                    <li><a href="./About" class="nav-link">About</a></li>
+                    <li><a href="../Home" class="nav-link">Home</a></li>
+                    <li><a href="../About" class="nav-link">About</a></li>
                     <li>
-                        <div class="nav-link dropdown-toggle" onclick="toggleFeaturesDropdown(event)">
+                        <span class="nav-link dropdown-toggle" onclick="toggleFeaturesDropdown(event)">
                             Features <i class="fas fa-chevron-down"></i>
-                        </div>
+                        </span>
                         <div class="features-dropdown">
-                            <a href="./Features/legal-intelligence" class="nav-link sub-link">Legal Intelligence</a>
-                            <a href="./Features/document-drafting" class="nav-link sub-link">Document Drafting</a>
-                            <a href="./Features/batch-review" class="nav-link sub-link">Batch Review</a>
-                            <a href="./Features/workflow-hub" class="nav-link sub-link">Workflow Hub</a>
-                            <a href="./Features/knowledge-vault" class="nav-link sub-link">Knowledge Vault</a>
-                            <a href="./Features/security" class="nav-link sub-link">Enterprise Security</a>
+                            <a href="../Features/legal-intelligence" class="nav-link sub-link">Legal Intelligence</a>
+                            <a href="../Features/document-drafting" class="nav-link sub-link">Document Drafting</a>
+                            <a href="../Features/batch-review" class="nav-link sub-link active">Batch Review</a>
+                            <a href="../Features/workflow-hub" class="nav-link sub-link">Workflow Hub</a>
+                            <a href="../Features/knowledge-vault" class="nav-link sub-link">Knowledge Vault</a>
+                            <a href="../Features/security" class="nav-link sub-link">Enterprise Security</a>
                         </div>
                     </li>
                     
-                    <li><a href="./TalkToExpert" class="nav-link-cta">Talk to an Expert</a></li>
-                    <li><a href="./Demo" class="nav-link-cta">Request Demo</a></li>
+                    <li><a href="../TalkToExpert" class="nav-link-cta">Talk to an Expert</a></li>
+                    <li><a href="../Demo" class="nav-link-cta">Request Demo</a></li>
                 </ul>
             </nav>
         </div>
@@ -113,7 +129,7 @@
           <h1 class="hero-title">ENCLARAA</h1>
           <p class="hero-subtitle">Transform Your Legal Practice</p>
           <p class="hero-description">Domain-specific intelligence engineered for law firms, corporate legal departments, professional service providers, and Fortune-level enterprises.</p>
-          <button class="hero-cta">Explore</button>
+          <button class="hero-cta" onclick="location.href='../TalkToExpert'">Explore</button>
         </div>
       </div>
 
@@ -122,7 +138,12 @@
         <span>Scroll</span>
       </div>
     </section>
-    </div>
+
+    <section class="enclara-section">
+      <div class="container enclara-inner">
+        <div class="enclara-image" style="text-align: center;">
+
+        </div>
         <div class="enclara-text">
           <h2>Enclaraa</h2>
           <h3>The All-in-One Legal AI Platform, Built for Security and Scale</h3>
@@ -147,14 +168,15 @@
             <div class="services-grid">
                 <div class="service-card video-feature-card">
                     <div class="video-left">
-                        <video autoplay muted loop playsinline webkit-playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback" controls="false" onclick="return false;" oncontextmenu="return false;" style="pointer-events: none;">
-                            <source src="./logo/VenRAAG Vedio.mp4" type="video/mp4">
+                        <video autoplay muted loop playsinline webkit-playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+                            <source src="../logo/VenRAAG Vedio.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
                         </video>
                     </div>
                     <div class="content-right">
                         <h2>AI-Powered Legal Research</h2>
                         <p>Harness the power of machine learning to search through millions of legal documents, case laws, and precedents in seconds with your domain-specific personal assistant.</p>
-                        <a href="./Features/legal-intelligence" class="explore-link">Explore Research →</a>
+                        <a href="../Features/legal-intelligence" class="explore-link">Explore Research →</a>
                     </div>
                 </div>
 
@@ -162,19 +184,21 @@
                     <div class="content-right">
                         <h2>Document Intelligence</h2>
                         <p>Automate contract review and document analysis with our advanced AI that understands legal context and nuance.</p>
-                        <a href="./Features/document-drafting" class="explore-link">Explore Intelligence →</a>
+                        <a href="../Features/document-drafting" class="explore-link">Explore Intelligence →</a>
                     </div>
                     <div class="video-left">
-                        <video autoplay muted loop playsinline webkit-playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback" controls="false" onclick="return false;" oncontextmenu="return false;" style="pointer-events: none;">
-                            <source src="./logo/VenRAAG Vedio - 2.mp4" type="video/mp4">
+                        <video autoplay muted loop playsinline webkit-playsinline>
+                            <source src="../logo/VenRAAG Vedio - 2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
                         </video>
                     </div>
                 </div>
 
                 <div class="service-card video-feature-card">
                     <div class="video-left">
-                        <video autoplay muted loop playsinline webkit-playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback" controls="false" onclick="return false;" oncontextmenu="return false;" style="pointer-events: none;">
-                            <source src="./logo/VenRAAG Vedio - 3.mp4" type="video/mp4">
+                        <video autoplay muted loop playsinline webkit-playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+                            <source src="../logo/VenRAAG Vedio - 3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
                         </video>
                     </div>
                     <div class="content-right">
@@ -185,16 +209,11 @@
                             <span class="tag">Strategy Optimization</span>
                             <span class="tag">Risk Modeling</span>
                         </div>
-                        <a href="./Features/batch-review" class="explore-link">Explore Analytics →</a>
+                        <a href="../Features/batch-review" class="explore-link">Explore Analytics →</a>
                     </div>
                 </div>
 
-                <div class="service-card video-feature-card">
-                    <div class="video-left">
-                        <video autoplay muted loop playsinline webkit-playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback" controls="false" onclick="return false;" oncontextmenu="return false;" style="pointer-events: none;">
-                            <source src="./logo/VenRAAG Vedio - 4.mp4" type="video/mp4">
-                        </video>
-                    </div>
+                <div class="service-card video-feature-card video-feature-card-reverse">
                     <div class="content-right">
                         <h2>Workflow Automation</h2>
                         <p>Streamline repetitive tasks and focus on high-value legal work with intelligent process automation.</p>
@@ -203,41 +222,24 @@
                             <span class="tag">Document Generation</span>
                             <span class="tag">Process Optimization</span>
                         </div>
-                        <a href="./Features/workflow-hub" class="explore-link">Explore Automation →</a>
+                        <a href="../Features/workflow-hub" class="explore-link">Explore Automation →</a>
+                    </div>
+                    <div class="video-left">
+                        <video autoplay muted loop playsinline webkit-playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+                            <source src="../logo/VenRAAG Vedio - 4.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Compliance & Certifications -->
+ <!-- Compliance & Certifications -->
     <section style="padding: 6rem 0; background: #1a1a1a; color: white;">
-        <style>
-        @media (max-width: 768px) {
-          .compliance-grid {
-            grid-template-columns: repeat(3, 1fr) !important;
-            gap: 1rem !important;
-            padding: 0 0.5rem !important;
-            transform: scale(0.7) !important;
-            transform-origin: center !important;
-            max-width: 100% !important;
-          }
-          
-          .compliance-grid h3 {
-            font-size: 1.2rem !important;
-            margin-bottom: 0.3rem !important;
-          }
-          
-          .compliance-grid p {
-            font-size: 0.7rem !important;
-            margin-bottom: 0.5rem !important;
-          }
-        }
-        </style>
         <div class="container">
             <h2 style="text-align: center; font-size: 3rem; color: white; margin-bottom: 4rem; font-weight: 400;">Compliant with Industry Standards</h2>
             
-            <div class="compliance-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem; max-width: 1200px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem; max-width: 1200px; margin: 0 auto;">
                 <div style="text-align: center;">
                     <div style="width: 120px; height: 120px; margin: 0 auto 2rem; display: flex; align-items: center; justify-content: center;">
                         <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -291,9 +293,8 @@
             </div>
         </div>
     </section>
-
     <!-- Video Showcase -->
-    <section class="video-section" id="video-showcase">
+    <section class="video-section">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">See It In Action</span>
@@ -302,13 +303,15 @@
 
             <div class="video-container">
                 <div class="video-wrapper scroll-video">
-                    <video autoplay muted loop disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback" controls="false" onclick="return false;" oncontextmenu="return false;" style="width: 100%; height: auto; pointer-events: none;">
-                        <source src="./logo/Lawyers  Talking vedio.mp4" type="video/mp4">
+                    <video autoplay muted loop playsinline webkit-playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback" style="width: 100%; height: auto;">
+                        <source src="../logo/Lawyers  Talking vedio.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
                     </video>
                 </div>
             </div>
         </div>
     </section>
+
 
 
 
@@ -318,13 +321,13 @@
     <div class="footer-cta">
       <div class="container footer-flex-container">
         <div class="footer-logo-container">
-          <img src="./logo/VenRAAG_logo_blue.png" alt="VenRAAG Logo" class="final-cta-logo">
+          <img src="../logo/VenRAAG_logo_blue.png" alt="VenRAAG Logo" class="final-cta-logo">
         </div>
         <div class="final-cta-content">
           <h2>Ready to see Enclaraa in action?</h2>
           <div class="final-cta-buttons">
-            <button onclick="location.href='./Demo'">Request a Demo</button>
-            <button onclick="location.href='./JoinWaitingList'">LETS JOIN</button>
+            <button onclick="location.href='../Demo'">Request a Demo</button>
+            <button onclick="location.href='../JoinWaitingList'"> LETS JOIN 
           </div>
         </div>
       </div>
@@ -335,9 +338,9 @@
     <div class="footer-info">
       <div class="container footer-container">
         <div class="footer-links">
-          <a href="./About" class="nav-link">About</a>
-          <a href="./Privacy" class="nav-link">Privacy Policy</a>
-          <a href="./Terms" class="nav-link">Terms of Use</a>
+          <a href="../About" class="nav-link">About</a>
+          <a href="../Privacy" class="nav-link">Privacy Policy</a>
+          <a href="../Terms" class="nav-link">Terms of Use</a>
         </div>
         <p>2025 LegalTech AI - All rights reserved.</p>
         <div class="social-media">
@@ -355,113 +358,7 @@
     </div>
   </footer>
   
-  <script src="./mobile-ios-fix.js"></script>
-  <script src="./ios-test.js"></script>
-  <script src="./script.js" defer></script>
-  <!-- Cookie Consent Banner -->
-  <div class="cookie-consent" id="cookieConsent">
-    <div class="cookie-consent-container">
-      <div class="cookie-consent-content">
-        <div class="cookie-consent-header">
-          <i class="fas fa-cookie-bite"></i>
-          <h3>Cookie Consent</h3>
-        </div>
-        <div class="cookie-consent-text">
-          <p>We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By clicking "Accept All", you consent to our use of cookies. To learn more about how we use cookies, please see our <a href="./Privacy">Privacy Policy</a>. You can manage your preferences or decline non-essential cookies at any time.</p>
-        </div>
-      </div>
-      <div class="cookie-consent-buttons">
-        <button id="acceptCookies" class="cookie-btn cookie-btn-accept">
-          <i class="fas fa-check"></i> Accept All
-        </button>
-        <button id="acceptEssentialCookies" class="cookie-btn cookie-btn-essentials">
-          <i class="fas fa-shield-alt"></i> Essentials Only
-        </button>
-        <button id="declineCookies" class="cookie-btn cookie-btn-decline">
-          <i class="fas fa-times"></i> Decline
-        </button>
-        <button id="cookieSettings" class="cookie-btn cookie-btn-decline">
-          <i class="fas fa-cog"></i> Customize
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Cookie Settings Modal -->
-  <div class="cookie-settings-modal" id="cookieSettingsModal">
-    <div class="cookie-settings-content">
-      <div class="cookie-settings-header">
-        <h3>Cookie Settings</h3>
-        <button id="closeSettings" class="cookie-settings-close">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      
-      <div class="cookie-settings-section">
-        <p>Manage your cookie preferences below. Essential cookies are necessary for the website to function properly and cannot be disabled.</p>
-        
-        <div class="cookie-toggle essential-toggle">
-          <div>
-            <div class="cookie-toggle-label">Essential Cookies</div>
-            <div class="cookie-toggle-description cookie-description-short">Required for the website to function properly.</div>
-            <div class="cookie-toggle-description cookie-description-full">
-              <p>Required for the website to function properly. These cookies ensure basic functionalities and security features of the website.</p>
-              <a href="javascript:void(0)" class="cookie-read-less">Read less</a>
-            </div>
-            <a href="javascript:void(0)" class="cookie-read-more">Read more</a>
-          </div>
-          <label class="cookie-toggle-switch">
-            <input type="checkbox" id="cookie-toggle-essential" checked disabled>
-            <span class="cookie-toggle-slider"></span>
-          </label>
-        </div>
-        
-        <div class="cookie-toggle">
-          <div>
-            <div class="cookie-toggle-label">Analytics Cookies</div>
-            <div class="cookie-toggle-description">Help us understand how visitors interact with our website.</div>
-          </div>
-          <label class="cookie-toggle-switch">
-            <input type="checkbox" id="cookie-toggle-analytics">
-            <span class="cookie-toggle-slider"></span>
-          </label>
-        </div>
-        
-        <div class="cookie-toggle">
-          <div>
-            <div class="cookie-toggle-label">Marketing Cookies</div>
-            <div class="cookie-toggle-description">Used to deliver relevant ads and measure their effectiveness.</div>
-          </div>
-          <label class="cookie-toggle-switch">
-            <input type="checkbox" id="cookie-toggle-marketing">
-            <span class="cookie-toggle-slider"></span>
-          </label>
-        </div>
-        
-        <div class="cookie-toggle">
-          <div>
-            <div class="cookie-toggle-label">Preference Cookies</div>
-            <div class="cookie-toggle-description">Remember your settings and improve your experience.</div>
-          </div>
-          <label class="cookie-toggle-switch">
-            <input type="checkbox" id="cookie-toggle-preferences">
-            <span class="cookie-toggle-slider"></span>
-          </label>
-        </div>
-      </div>
-      
-      <div class="cookie-settings-footer">
-        <button id="saveSettings" class="cookie-settings-save">Save Settings</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Scripts -->
-  <script>
-    // Clear existing cookie consent for testing
-    localStorage.removeItem('cookieConsent');
-    localStorage.removeItem('cookieConsentDate');
-  </script>
-  <script src="./script.js" defer></script>
+  <script src="../script.js" defer></script>
+  <script src="../mobile-ios-fix.js" defer></script>
 </body>
 </html>
