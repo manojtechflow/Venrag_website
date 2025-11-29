@@ -406,6 +406,23 @@
     color: white !important;
     font-size: 12px !important;
   }
+
+  /* Replace blue footer logo with main JPG logo on mobile to match desktop */
+  .footer-logo-container img.final-cta-logo {
+    display: none !important;
+  }
+
+  .footer-logo-container::before {
+    content: "" !important;
+    display: block !important;
+    width: 120px !important;
+    height: 60px !important;
+    margin: 0 auto 12px !important;
+    background-image: url('../logo/VenRAAG_logo.JPG') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+  }
   
   /* Scroll indicator mobile */
   .scroll-indicator {
