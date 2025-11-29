@@ -71,6 +71,9 @@
     height: auto;
     display: block;
     pointer-events: auto;
+    object-fit: cover;
+    max-height: 60vh;
+    background-color: #000;
   }
 
   /* iOS Safe Area Support */

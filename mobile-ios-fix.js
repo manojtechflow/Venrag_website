@@ -51,15 +51,31 @@ document.addEventListener('DOMContentLoaded', function() {
             playVideo();
             video.addEventListener('loadeddata', playVideo);
             video.addEventListener('canplay', playVideo);
-            
-            // For iOS: allow one user interaction to ensure video plays
-            if (isIOS) {
-                video.addEventListener('touchend', (e) => {
-                    video.play().catch(err => console.log('Play on touch:', err));
-                }, { once: true });
-            }
         });
-        
+
+        // Global mobile fallback: attempt to play all videos on first user interaction
+        // This helps Android and iOS when autoplay is restricted — keeps desktop untouched
+        let _mobilePlayed = false;
+        const tryPlayAllOnInteraction = () => {
+            if (_mobilePlayed) return;
+            const vids = document.querySelectorAll('video');
+            vids.forEach(v => {
+                try {
+                    v.muted = true;
+                    v.playsInline = true;
+                    v.setAttribute('playsinline', 'true');
+                    v.setAttribute('webkit-playsinline', 'true');
+                    const p = v.play();
+                    if (p && typeof p.catch === 'function') p.catch(() => {});
+                } catch (e) { /* ignore */ }
+            });
+            _mobilePlayed = true;
+        };
+
+        // Listen for a single touch or click to trigger playback on mobile devices
+        document.addEventListener('touchstart', tryPlayAllOnInteraction, { once: true, passive: true });
+        document.addEventListener('click', tryPlayAllOnInteraction, { once: true });
+
         // iOS specific fixes
         if (isIOS) {
             // Fix viewport height for iOS Safari
