@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
             video.loop = true;
             video.playsInline = true;
             
-            // Disable video controls completely
-            video.controls = false;
+            // Enable controls on mobile for better UX
+            video.controls = true;
             video.disablePictureInPicture = true;
             
             // For iOS: keep pointer events for potential user interaction to trigger play
@@ -99,18 +99,10 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-        // Mobile-only: if the footer currently uses the blue footer image, swap it to the main JPG
-        // This preserves any pages that intentionally use a different footer logo (e.g., gold on About).
-        try {
-            const footerLogo = document.querySelector('.footer-logo-container img.final-cta-logo');
-            if (footerLogo && footerLogo.getAttribute('src') && footerLogo.getAttribute('src').indexOf('VenRAAG_logo_blue') !== -1) {
-                // Use the JPG main logo (relative path)
-                footerLogo.setAttribute('src', '../logo/VenRAAG_logo.JPG');
-                footerLogo.setAttribute('alt', 'VenRAAG Logo');
-            }
-        } catch (e) {
-            console.warn('Footer logo swap failed:', e);
-        }
+            // Ensure videos preload metadata on mobile for faster first play
+            try {
+                video.setAttribute('preload', 'metadata');
+            } catch (e) { /* ignore */ }
     }
     
     // Mobile menu functionality

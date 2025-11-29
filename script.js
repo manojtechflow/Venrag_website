@@ -32,6 +32,29 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+// Touch-only debounce to prevent accidental double taps / double navigation on mobile
+(function(){
+    const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints && navigator.maxTouchPoints > 0);
+    const smallScreen = window.innerWidth && window.innerWidth <= 768;
+    if (!isTouch && !smallScreen) return;
+
+    let navLock = false;
+    document.addEventListener('click', function(e){
+        const el = e.target.closest('a, button');
+        if (!el) return;
+        if (navLock) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            return;
+        }
+        // lock when a navigation is triggered, short timeout
+        if ((el.tagName === 'A' && el.href) || el.tagName === 'BUTTON') {
+            navLock = true;
+            setTimeout(() => { navLock = false; }, 700);
+        }
+    }, true);
+})();
+
 // Navbar scroll effect
 const navbar = document.querySelector('.navbar');
 if (navbar) {
